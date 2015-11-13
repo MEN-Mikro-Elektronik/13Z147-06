@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="packagedesc.xsd">
+	<name>13z14706</name>
+	<description>MDIS5 driver package for ARINC 717 IP CORE; MEN 16Z147 for receive and 16Z247 for transmit.</description>
+	<date>2015-10-20</date>
+	<revision>1.1</revision>
+	<docroot>DRIVERS/MDIS_LL/Z147/DOC/html/index.html</docroot>
+	<!-- Models -->
+	<modellist>
+		<model>
+			<!-- standard model -->
+			<hwname>16Z147</hwname>
+			<description>ARINC 717 Receiver</description>
+			<devnameprefix>ARINC_717_RX</devnameprefix>
+			<devtype>MDIS</devtype>
+			<autoid>
+				<chamv2id>147</chamv2id>
+			</autoid>
+			<bbslot>
+				<bbismodel>CHAMELEON</bbismodel>
+			</bbslot>
+			<bbslot>
+				<bbismodel>CHAMELEON_PCITBL</bbismodel>
+			</bbslot>
+			<swmodulelist>
+				<swmodule>
+					<name>arinc717_rx</name>
+					<description>ARINC 717 Receive driver</description>
+					<type>Low Level Driver</type>
+					<makefilepath>Z147/DRIVER/COM/driver_rx.mak</makefilepath>
+				</swmodule>
+			</swmodulelist>
+		</model>
+		<model>
+			<!-- standard model -->
+			<hwname>16Z247</hwname>
+			<description>ARINC 717 Transmitter</description>
+			<devnameprefix>ARINC_717_TX</devnameprefix>
+			<devtype>MDIS</devtype>
+			<autoid>
+				<chamv2id>247</chamv2id>
+			</autoid>
+			<bbslot>
+				<bbismodel>CHAMELEON</bbismodel>
+			</bbslot>
+			<bbslot>
+				<bbismodel>CHAMELEON_PCITBL</bbismodel>
+			</bbslot>
+			<swmodulelist>
+				<swmodule>
+					<name>arinc717_tx</name>
+					<description>ARINC 717 Transmit driver</description>
+					<type>Low Level Driver</type>
+					<makefilepath>Z147/DRIVER/COM/driver_tx.mak</makefilepath>
+				</swmodule>
+			</swmodulelist>
+		</model>
+	</modellist>
+	<!-- Global software modules -->
+	<swmodulelist>
+		<swmodule>
+			<name>z147_example</name>
+			<description>Example program for ARINC 717 Receive driver</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>Z147/EXAMPLE/Z147_EXAMPLE/COM/program.mak</makefilepath>
+		</swmodule>
+		<swmodule>
+			<name>timing_test_tx_part</name>
+			<description>Timing test transmit part.</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>Z147/TOOLS/TIMING_TEST_TX_PART/COM/program.mak</makefilepath>
+		</swmodule>
+		<swmodule>
+			<name>timing_test_rx_part</name>
+			<description>Timing test receive part.</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>Z147/TOOLS/TIMING_TEST_RX_PART/COM/program.mak</makefilepath>
+		</swmodule>
+	</swmodulelist>
+</package>
