@@ -76,5 +76,23 @@
 			<type>Driver Specific Tool</type>
 			<makefilepath>Z147/TOOLS/TIMING_TEST_RX_PART/COM/program.mak</makefilepath>
 		</swmodule>
+		<swmodule>
+			<name>rate_test_tx_part</name>
+			<description>Rate test transmit part.</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>Z147/TOOLS/RATE_TEST_TX_PART/COM/program.mak</makefilepath>
+		</swmodule>
+		<swmodule>
+			<name>rate_test_rx_part</name>
+			<description>Rate test receive part.</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>Z147/TOOLS/RATE_TEST_RX_PART/COM/program.mak</makefilepath>
+		</swmodule>
+		<swmodule>
+			<name>sync_test</name>
+			<description>Sync test of the receiver.</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>Z147/TOOLS/SYNC_TEST/COM/program.mak</makefilepath>
+		</swmodule>
 	</swmodulelist>
 </package>

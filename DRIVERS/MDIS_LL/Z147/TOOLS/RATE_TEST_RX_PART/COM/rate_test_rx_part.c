@@ -1,21 +1,16 @@
 /****************************************************************************
  ************                                                    ************
- ************                   Z147_EXAMPLE                     ************
+ ************                   Z147_RATE_TEST                   ************
  ************                                                    ************
  ****************************************************************************/
 /*!
- *         \file timing_test_rx_part.c
+ *         \file rate_test_rx_part.c
  *       \author Apatil
  *        $Date: 2009/07/10 13:40:12 $
  *    $Revision: 1.5 $
  *
- *       \brief  Simple example program for the Z147 driver
+ *       \brief  Program for the Z147 driver rate test
  *
- *               Reads and writes some values from/to GPIO ports,
- *               generating interrupts.
- *               Interrupts will be generated only on inputs. Thatsway
- *               normaly an external loopback from the outputs gpio[0]..[4]
- *               to gpio[5]..[7] is required.
  *
  *     Required: libraries: mdis_api, usr_oss
  *     \switches (none)
@@ -192,24 +187,6 @@ int main(int argc, char *argv[])
 				}
 				UOS_Delay(100);
 			}
-//
-//			if((isSync == 0) && (k==0)){
-//				while(1){
-//					result = M_getstat(rxPath, Z147_RX_IN_SYNC, &isSync);
-//
-//					if(result != 0){
-//						G_Errors++;
-//					}
-//					if(isSync){
-//						break;
-//					}else{
-//						UOS_Delay(100);
-//					}
-//				}
-//			}else if((isSync == 0) && (k!=0)){
-//				printf("Sync failed\n");
-//				goto Z147_EXIT;
-//			}
 
 		}
 		result = M_setstat(rxPath, Z147_DISABLE_RX, 1);

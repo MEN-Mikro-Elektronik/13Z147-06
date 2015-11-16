@@ -1,21 +1,16 @@
 /****************************************************************************
  ************                                                    ************
- ************                   Z147_EXAMPLE                     ************
+ ************                   Z147_RATE                        ************
  ************                                                    ************
  ****************************************************************************/
 /*!
- *         \file z146_example.c
+ *         \file z146_rate_test.c
  *       \author Apatil
  *        $Date: 2009/07/10 13:40:12 $
  *    $Revision: 1.5 $
  *
- *       \brief  Simple example program for the Z147 driver
+ *       \brief  Program for the Z147 driver rate
  *
- *               Reads and writes some values from/to GPIO ports,
- *               generating interrupts.
- *               Interrupts will be generated only on inputs. Thatsway
- *               normaly an external loopback from the outputs gpio[0]..[4]
- *               to gpio[5]..[7] is required.
  *
  *     Required: libraries: mdis_api, usr_oss
  *     \switches (none)
@@ -108,14 +103,13 @@ int main(int argc, char *argv[])
 	printf("argc = %d\n",argc );
 	if (argc < 1 || strcmp(argv[1],"-?")==0) {
 		printf("Syntax: timing_test_tx_part <txDevice> \n");
-		printf("Function: Example program for using the Z147 driver\n");
+		printf("Function: Test program for rate test of the Z147 driver\n");
 		printf("%s \n",RCSid );
 		return(1);
 	}
 
 	printf("%s \n",RCSid );
 	txDevice = argv[1];
-
 
 	for(dataRate = 0; dataRate <= Z147_RX_DATA_RATE_8192; dataRate++){
 		/*--------------------+

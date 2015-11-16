@@ -126,6 +126,7 @@ int main(int argc, char *argv[])
 
 	rxDevice = argv[1];
 	txDevice = argv[2];
+	G_DataLen = 256;
 	/*--------------------+
     |  open rxPath          |
     +--------------------*/
@@ -148,36 +149,6 @@ int main(int argc, char *argv[])
 	if(result != 0){
 		G_Errors++;
 	}
-	for(dataRate = 0; dataRate <= Z147_RX_DATA_RATE_8192; dataRate++){
-		switch(dataRate){
-		case Z147_RX_DATA_RATE_64:
-			G_DataLen = 256;
-			break;
-		case Z147_RX_DATA_RATE_128:
-			G_DataLen = 512;
-			break;
-		case Z147_RX_DATA_RATE_256:
-			G_DataLen = 1024;
-			break;
-		case Z147_RX_DATA_RATE_512:
-			G_DataLen = 2048;
-			break;
-		case Z147_RX_DATA_RATE_1024:
-			G_DataLen = 4096;
-			break;
-		case Z147_RX_DATA_RATE_2048:
-			G_DataLen = 8192;
-			break;
-		case Z147_RX_DATA_RATE_4096:
-			G_DataLen = 16384;
-			break;
-		case Z147_RX_DATA_RATE_8192:
-			G_DataLen = 32768;
-			break;
-		default:
-			G_DataLen = 256;
-			printf("Unknown dataRate = %d, setting default rate to 64.\n", dataRate);
-		}
 		result = M_setstat(txPath, Z247_TX_DATA_RATE, dataRate);
 		if(result != 0){
 			printf("Setting transmit data rate failed.\n");
@@ -188,55 +159,55 @@ int main(int argc, char *argv[])
 			printf("Setting receive data rate failed.\n");
 			G_Errors++;
 		}
+	G_TxDataByte = 0;
+	for(k=0;k<10;k++){
+		printf("\n");
+		printf("################### Test Run-%d ################\n", k+1);
+		printf("----------------- Transmit -----------------\n");
+		printf("User data length = %d and dataptr = 0x%x\n", G_DataLen, txDataArray);
 		G_TxDataByte = 0;
-		for(k=0;k<10;k++){
-			printf("\n");
-			printf("################### Test Run-%d (Data Rate-%d) ################\n", k+1, dataRate);
-			printf("----------------- Transmit -----------------\n");
-			printf("User data length = %d and dataptr = 0x%x\n", G_DataLen, txDataArray);
-			G_TxDataByte = 0;
-			for(i=0;i<(G_DataLen-4);i++){
-				if(i==G_TxDataByte){
-					txDataArray[i] = G_TxDataByte++;
-				}
-
+		for(i=0;i<(G_DataLen-4);i++){
+			if(i==G_TxDataByte){
+				txDataArray[i] = G_TxDataByte++;
 			}
-			printf("\n");
-			printf("\n");
-			result = M_setblock(txPath, (u_int8*)txDataArray, (G_DataLen *2) - 8);
-			if(result > 0){
-				printf("Transmitted %d bytes successfully\n", G_DataLen *2);
-			}else{
-				printf("Write failed with result %d\n", result);
+
+		}
+		printf("\n");
+		printf("\n");
+		result = M_setblock(txPath, (u_int8*)txDataArray, (G_DataLen *2) - 8);
+		if(result > 0){
+			printf("Transmitted %d bytes successfully\n", G_DataLen *2);
+		}else{
+			printf("Write failed with result %d\n", result);
+			G_Errors++;
+		}
+		printf("--------------------------------\n");
+		printf("\n");
+
+		UOS_Delay( 4000);
+
+		while(1){
+			result = M_getstat(rxPath, Z147_RX_IN_SYNC, &isSync);
+
+			if((k!=0) && result != 0){
+				printf("Sync failed\n");
+				return -1;
+			}
+
+			if(result != 0){
 				G_Errors++;
 			}
-			printf("--------------------------------\n");
-			printf("\n");
-
-			UOS_Delay( 4000);
-
-			while(1){
-				result = M_getstat(rxPath, Z147_RX_IN_SYNC, &isSync);
-
-				if((k!=0) && result != 0){
-					printf("Sync failed\n");
-					return -1;
-				}
-
-				if(result != 0){
-					G_Errors++;
-				}
-				if(isSync){
-					printf("Is rx in sync = %d\n", isSync);
-					break;
-				}else{
-					UOS_Delay(100);
-				}
+			if(isSync){
+				printf("Is rx in sync = %d\n", isSync);
+				break;
+			}else{
+				UOS_Delay(100);
 			}
-			printf("G_sigCount = %d\n", G_sigCount);
-			G_TxFrameCnt++;
 		}
+		printf("G_sigCount = %d\n", G_sigCount);
+		G_TxFrameCnt++;
 	}
+	
 
 	result = M_setstat(txPath, Z247_DISABLE_TX, 1);
 	if(result != 0){

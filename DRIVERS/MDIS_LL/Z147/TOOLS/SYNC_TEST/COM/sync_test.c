@@ -1,6 +1,6 @@
 /****************************************************************************
  ************                                                    ************
- ************                   Z147_EXAMPLE                     ************
+ ************                   Z147_SYNC_TEST                    ************
  ************                                                    ************
  ****************************************************************************/
 /*!
@@ -9,13 +9,8 @@
  *        $Date: 2009/07/10 13:40:12 $
  *    $Revision: 1.5 $
  *
- *       \brief  Simple example program for the Z147 driver
+ *       \brief  Program for the Z147 driver sync test
  *
- *               Reads and writes some values from/to GPIO ports,
- *               generating interrupts.
- *               Interrupts will be generated only on inputs. Thatsway
- *               normaly an external loopback from the outputs gpio[0]..[4]
- *               to gpio[5]..[7] is required.
  *
  *     Required: libraries: mdis_api, usr_oss
  *     \switches (none)
@@ -96,7 +91,6 @@ u_int32 G_RxFrameCnt = 0;
  */
 int main(int argc, char *argv[])
 {
-
 	int32 irqCount;
 	char	*rxDevice;
 	char	*txDevice;
@@ -106,7 +100,7 @@ int main(int argc, char *argv[])
 	u_int32 i = 0;
 	int j = 0;
 	int k = 0;
-	int dataRate =0;
+	int syncCfg =0;
 
 	int testType = 0;
 	u_int32 data = 0;
@@ -116,8 +110,8 @@ int main(int argc, char *argv[])
 	u_int16 *rxBuf = NULL;
 	printf("argc = %d\n",argc );
 	if (argc < 3 || strcmp(argv[1],"-?")==0) {
-		printf("Syntax: z147_example <rxDevice> <txDevice> <Data Length>\n");
-		printf("Function: Example program for using the Z147 driver\n");
+		printf("Syntax: sync_test <rxDevice> <txDevice> <Data Length>\n");
+		printf("Function: Test program for sync test of the Z147 driver\n");
 		printf("%s \n",RCSid );
 		return(1);
 	}
@@ -148,42 +142,21 @@ int main(int argc, char *argv[])
 	if(result != 0){
 		G_Errors++;
 	}
-	for(dataRate = 0; dataRate <= Z147_RX_DATA_RATE_8192; dataRate++){
-		switch(dataRate){
-		case Z147_RX_DATA_RATE_64:
-			G_DataLen = 256;
-			break;
-		case Z147_RX_DATA_RATE_128:
-			G_DataLen = 512;
-			break;
-		case Z147_RX_DATA_RATE_256:
-			G_DataLen = 1024;
-			break;
-		case Z147_RX_DATA_RATE_512:
-			G_DataLen = 2048;
-			break;
-		case Z147_RX_DATA_RATE_1024:
-			G_DataLen = 4096;
-			break;
-		case Z147_RX_DATA_RATE_2048:
-			G_DataLen = 8192;
-			break;
-		case Z147_RX_DATA_RATE_4096:
-			G_DataLen = 16384;
-			break;
-		case Z147_RX_DATA_RATE_8192:
-			G_DataLen = 32768;
-			break;
-		default:
-			G_DataLen = 256;
-			printf("Unknown dataRate = %d, setting default rate to 64.\n", dataRate);
+	G_DataLen = 256;
+
+	for(syncCfg = 2; syncCfg >= 0; syncCfg--){
+
+		result = M_setstat(rxPath, Z147_RX_SYNC_CFG, syncCfg);
+		if(result != 0){
+			printf("Setting receive sync failed.\n");
+			G_Errors++;
 		}
-		result = M_setstat(txPath, Z247_TX_DATA_RATE, dataRate);
+		result = M_setstat(txPath, Z247_TX_DATA_RATE, 0);
 		if(result != 0){
 			printf("Setting transmit data rate failed.\n");
 			G_Errors++;
 		}
-		result = M_setstat(rxPath, Z147_RX_DATA_RATE, dataRate);
+		result = M_setstat(rxPath, Z147_RX_DATA_RATE, 0);
 		if(result != 0){
 			printf("Setting receive data rate failed.\n");
 			G_Errors++;
@@ -191,7 +164,7 @@ int main(int argc, char *argv[])
 		G_TxDataByte = 0;
 		for(k=0;k<10;k++){
 			printf("\n");
-			printf("################### Test Run-%d (Data Rate-%d) ################\n", k+1, dataRate);
+			printf("################### Test Run-%d (Sync Cfg-%d) ################\n", k+1, syncCfg);
 			printf("----------------- Transmit -----------------\n");
 			printf("User data length = %d and dataptr = 0x%x\n", G_DataLen, txDataArray);
 			G_TxDataByte = 0;
@@ -214,23 +187,24 @@ int main(int argc, char *argv[])
 			printf("\n");
 
 			UOS_Delay( 4000);
+			if(syncCfg == 2){
+				while(1){
+					result = M_getstat(rxPath, Z147_RX_IN_SYNC, &isSync);
 
-			while(1){
-				result = M_getstat(rxPath, Z147_RX_IN_SYNC, &isSync);
+					if((k!=0) && result != 0){
+						printf("Sync failed\n");
+						return -1;
+					}
 
-				if((k!=0) && result != 0){
-					printf("Sync failed\n");
-					return -1;
-				}
-
-				if(result != 0){
-					G_Errors++;
-				}
-				if(isSync){
-					printf("Is rx in sync = %d\n", isSync);
-					break;
-				}else{
-					UOS_Delay(100);
+					if(result != 0){
+						G_Errors++;
+					}
+					if(isSync){
+						printf("Is rx in sync = %d\n", isSync);
+						break;
+					}else{
+						UOS_Delay(100);
+					}
 				}
 			}
 			printf("G_sigCount = %d\n", G_sigCount);
