@@ -579,8 +579,6 @@ static int32 Z247_SetStat(
  *
  *  The driver supports \ref getstat_setstat_codes "these status codes"
  *  in addition to the standard codes (see mdis_api.h).
- *  Getstat Z247_IRQ_LAST_REQUEST will return the last IRQ request mask
- *  and clear it than.
  *  \param llHdl             \IN  low-level handle
  *  \param code              \IN  \ref getstat_setstat_codes "status code"
  *  \param ch                \IN  current channel

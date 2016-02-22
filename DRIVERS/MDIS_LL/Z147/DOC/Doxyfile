@@ -1,0 +1,33 @@
+@INCLUDE_PATH = $(MEN_DOXYGENTMPL)
+@INCLUDE = DoxyfileCommon
+
+PROJECT_NAME           = "13Z147 MDIS Driver"
+INPUT                  = \
+                    	../DRIVER/COM  \
+                    	$(MEN_COM_INC)/MEN/z147_drv.h \
+						$(MEN_COM_INC)/MEN/z247_drv.h \
+						../EXAMPLE/Z147_EXAMPLE/COM/z147_example.c \
+						../TOOLS/RATE_TEST_RX_PART/COM/rate_test_rx_part.c \
+						../TOOLS/RATE_TEST_TX_PART/COM/rate_test_tx_part.c \
+						../TOOLS/SYNC_TEST/COM/sync_test.c \
+						../TOOLS/TIMING_TEST_RX_PART/COM/timing_test_rx_part.c \
+						../TOOLS/TIMING_TEST_TX_PART/COM/timing_test_tx_part.c
+
+EXAMPLE_RECURSIVE      = YES
+EXAMPLE_PATH           = ../EXAMPLE/Z147_EXAMPLE/COM/z147_example.c \
+						../TOOLS/RATE_TEST_RX_PART/COM/rate_test_rx_part.c \
+						../TOOLS/RATE_TEST_TX_PART/COM/rate_test_tx_part.c \
+						../TOOLS/SYNC_TEST/COM/sync_test.c \
+						../TOOLS/TIMING_TEST_RX_PART/COM/timing_test_rx_part.c \
+						../TOOLS/TIMING_TEST_TX_PART/COM/timing_test_tx_part.c
+
+OUTPUT_DIRECTORY       = .
+EXTRACT_ALL            = YES
+EXTRACT_STATIC         = YES
+GENERATE_HTMLHELP      = YES
+WARNINGS               = YES
+WARN_IF_DOC_ERROR      = YES
+WARN_IF_UNDOCUMENTED   = YES
+GENERATE_HTMLHELP      = YES
+TAGFILES               = ../../../../LIBSRC/MDIS_API/DOC/mdis_api.tag=../../../../../LIBSRC/MDIS_API/DOC/html
+GENERATE_TAGFILE       = z147_driver.tag
