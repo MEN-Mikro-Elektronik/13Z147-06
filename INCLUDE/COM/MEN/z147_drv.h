@@ -38,7 +38,7 @@
 |  DEFINES                                 |
 +-----------------------------------------*/
 /** \name Z147 specific Getstat/Setstat standard codes
- *  \anchor getstat_setstat_codes
+ *  \anchor rx_getstat_setstat_codes
  */
 /**@{*/
 #define Z147_SET_SIGNAL          M_DEV_OF+0x01    /**<   S: Set signal sent on IRQ  */

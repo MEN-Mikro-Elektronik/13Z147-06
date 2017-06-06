@@ -49,7 +49,7 @@ typedef struct {
 |  DEFINES                                 |
 +-----------------------------------------*/
 /** \name Z247 specific Getstat/Setstat standard codes
- *  \anchor getstat_setstat_codes
+ *  \anchor tx_getstat_setstat_codes
  */
 /**@{*/
 #define Z247_SET_PORTS           M_DEV_OF+0x00    /**<   S: Set IO ports without affecting others - 8 bit mask - bit 0 for gpio[0] */

@@ -40,42 +40,6 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structLL__HANDLE.html#m34"><param name="Name" value="LL_HANDLE"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="ARINC717_SUB_1_SYNC"><param name="Name" value="ARINC717_SUB_1_SYNC"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a0"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a0"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a0"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a0"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a0"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a0"><param name="Name" value="z147_example.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="ARINC717_SUB_2_SYNC"><param name="Name" value="ARINC717_SUB_2_SYNC"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a1"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a1"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a1"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a1"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a1"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a1"><param name="Name" value="z147_example.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="ARINC717_SUB_3_SYNC"><param name="Name" value="ARINC717_SUB_3_SYNC"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a2"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a2"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a2"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a2"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a2"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a2"><param name="Name" value="z147_example.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="ARINC717_SUB_4_SYNC"><param name="Name" value="ARINC717_SUB_4_SYNC"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a3"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a3"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a3"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a3"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a3"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a3"><param name="Name" value="z147_example.c"></OBJECT>
-  </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="CH_NUMBER"><param name="Name" value="CH_NUMBER"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__drv_8c.html#a3"><param name="Name" value="z147_drv.c"></OBJECT>
@@ -148,90 +112,6 @@
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="drvRingTail"><param name="Name" value="drvRingTail"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structLL__HANDLE.html#m17"><param name="Name" value="LL_HANDLE"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="G_CurrentTime"><param name="Name" value="G_CurrentTime"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a23"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a23"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="G_DataByte"><param name="Name" value="G_DataByte"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a20"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a19"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a20"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a19"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="G_DataLen"><param name="Name" value="G_DataLen"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a19"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a18"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a19"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a19"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a18"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a19"><param name="Name" value="z147_example.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="G_Errors"><param name="Name" value="G_Errors"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a17"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a17"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a18"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a17"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a17"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a18"><param name="Name" value="z147_example.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="G_PrevTime"><param name="Name" value="G_PrevTime"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a24"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a24"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="G_RxDataByte"><param name="Name" value="G_RxDataByte"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a21"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a21"><param name="Name" value="z147_example.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="G_RxFrameCnt"><param name="Name" value="G_RxFrameCnt"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a22"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a21"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a23"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a22"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a21"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a23"><param name="Name" value="z147_example.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="G_sigCount"><param name="Name" value="G_sigCount"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a14"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a13"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a13"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a14"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a13"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a13"><param name="Name" value="z147_example.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="G_StartParam"><param name="Name" value="G_StartParam"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a25"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a14"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a25"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a14"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="G_TimingError"><param name="Name" value="G_TimingError"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a18"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a18"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="G_TxDataByte"><param name="Name" value="G_TxDataByte"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a20"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a20"><param name="Name" value="z147_example.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="G_TxFrameCnt"><param name="Name" value="G_TxFrameCnt"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a21"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a20"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a22"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a21"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a20"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a22"><param name="Name" value="z147_example.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="HwWrite"><param name="Name" value="HwWrite"></OBJECT>
   <UL>
@@ -330,15 +210,6 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structLL__HANDLE.html#m4"><param name="Name" value="LL_HANDLE"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="main"><param name="Name" value="main"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a28"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a23"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a26"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a28"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a23"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a26"><param name="Name" value="z147_example.c"></OBJECT>
-  </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="MDIS_PATH"><param name="Name" value="MDIS_PATH"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__drv_8h.html#a19"><param name="Name" value="z147_drv.h"></OBJECT>
@@ -365,83 +236,6 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structLL__HANDLE.html#m32"><param name="Name" value="LL_HANDLE"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="PrintError"><param name="Name" value="PrintError"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a26"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a22"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a24"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a26"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a22"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a24"><param name="Name" value="z147_example.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a0"><param name="Name" value="ARINC717_SUB_1_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a1"><param name="Name" value="ARINC717_SUB_2_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a2"><param name="Name" value="ARINC717_SUB_3_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a3"><param name="Name" value="ARINC717_SUB_4_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a23"><param name="Name" value="G_CurrentTime"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a20"><param name="Name" value="G_DataByte"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a19"><param name="Name" value="G_DataLen"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a17"><param name="Name" value="G_Errors"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a24"><param name="Name" value="G_PrevTime"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a22"><param name="Name" value="G_RxFrameCnt"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a14"><param name="Name" value="G_sigCount"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a25"><param name="Name" value="G_StartParam"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a18"><param name="Name" value="G_TimingError"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a21"><param name="Name" value="G_TxFrameCnt"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a28"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a26"><param name="Name" value="PrintError"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a13"><param name="Name" value="RCSid"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a16"><param name="Name" value="rxDataArray"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a15"><param name="Name" value="rxPath"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a27"><param name="Name" value="SignalHandler"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a12"><param name="Name" value="Z147_FRAME_TIME"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a8"><param name="Name" value="Z147_RX_DATA_RATE_1024"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a5"><param name="Name" value="Z147_RX_DATA_RATE_128"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a9"><param name="Name" value="Z147_RX_DATA_RATE_2048"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a6"><param name="Name" value="Z147_RX_DATA_RATE_256"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a10"><param name="Name" value="Z147_RX_DATA_RATE_4096"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a7"><param name="Name" value="Z147_RX_DATA_RATE_512"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a4"><param name="Name" value="Z147_RX_DATA_RATE_64"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a11"><param name="Name" value="Z147_RX_DATA_RATE_8192"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a0"><param name="Name" value="ARINC717_SUB_1_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a1"><param name="Name" value="ARINC717_SUB_2_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a2"><param name="Name" value="ARINC717_SUB_3_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a3"><param name="Name" value="ARINC717_SUB_4_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a19"><param name="Name" value="G_DataByte"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a18"><param name="Name" value="G_DataLen"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a17"><param name="Name" value="G_Errors"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a21"><param name="Name" value="G_RxFrameCnt"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a13"><param name="Name" value="G_sigCount"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a14"><param name="Name" value="G_StartParam"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a20"><param name="Name" value="G_TxFrameCnt"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a23"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a22"><param name="Name" value="PrintError"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a12"><param name="Name" value="RCSid"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a16"><param name="Name" value="txDataArray"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a15"><param name="Name" value="txPath"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a8"><param name="Name" value="Z147_RX_DATA_RATE_1024"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a5"><param name="Name" value="Z147_RX_DATA_RATE_128"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a9"><param name="Name" value="Z147_RX_DATA_RATE_2048"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a6"><param name="Name" value="Z147_RX_DATA_RATE_256"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a10"><param name="Name" value="Z147_RX_DATA_RATE_4096"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a7"><param name="Name" value="Z147_RX_DATA_RATE_512"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a4"><param name="Name" value="Z147_RX_DATA_RATE_64"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a11"><param name="Name" value="Z147_RX_DATA_RATE_8192"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="RCSid"><param name="Name" value="RCSid"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a13"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a12"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a12"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a13"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a12"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a12"><param name="Name" value="z147_example.c"></OBJECT>
-  </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="ReadFromBuffer"><param name="Name" value="ReadFromBuffer"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z247__drv_8c.html#a71"><param name="Name" value="z247_drv.c"></OBJECT>
@@ -458,13 +252,6 @@
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="RESET_OFF"><param name="Name" value="RESET_OFF"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z247__drv_8c.html#a10"><param name="Name" value="z247_drv.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="rxDataArray"><param name="Name" value="rxDataArray"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a16"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a17"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a16"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a17"><param name="Name" value="z147_example.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="rxDataSig"><param name="Name" value="rxDataSig"></OBJECT>
   <UL>
@@ -486,13 +273,6 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structLL__HANDLE.html#m25"><param name="Name" value="LL_HANDLE"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="rxPath"><param name="Name" value="rxPath"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a15"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a14"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a15"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a14"><param name="Name" value="z147_example.c"></OBJECT>
-  </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="rxStreamIntErrCnt"><param name="Name" value="rxStreamIntErrCnt"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structLL__HANDLE.html#m26"><param name="Name" value="LL_HANDLE"></OBJECT>
@@ -501,13 +281,6 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__drv_8c.html#a74"><param name="Name" value="z147_drv.c"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z247__drv_8c.html#a69"><param name="Name" value="z247_drv.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SignalHandler"><param name="Name" value="SignalHandler"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a27"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a25"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a27"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a25"><param name="Name" value="z147_example.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="startTick"><param name="Name" value="startTick"></OBJECT>
   <UL>
@@ -521,120 +294,17 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structLL__HANDLE.html#m20"><param name="Name" value="LL_HANDLE"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html"><param name="Name" value="sync_test.c"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a0"><param name="Name" value="ARINC717_SUB_1_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a1"><param name="Name" value="ARINC717_SUB_2_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a2"><param name="Name" value="ARINC717_SUB_3_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a3"><param name="Name" value="ARINC717_SUB_4_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a19"><param name="Name" value="G_DataLen"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a18"><param name="Name" value="G_Errors"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a21"><param name="Name" value="G_RxDataByte"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a23"><param name="Name" value="G_RxFrameCnt"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a13"><param name="Name" value="G_sigCount"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a20"><param name="Name" value="G_TxDataByte"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a22"><param name="Name" value="G_TxFrameCnt"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a26"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a24"><param name="Name" value="PrintError"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a12"><param name="Name" value="RCSid"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a17"><param name="Name" value="rxDataArray"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a14"><param name="Name" value="rxPath"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a25"><param name="Name" value="SignalHandler"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a16"><param name="Name" value="txDataArray"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a15"><param name="Name" value="txPath"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a8"><param name="Name" value="Z147_RX_DATA_RATE_1024"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a5"><param name="Name" value="Z147_RX_DATA_RATE_128"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a9"><param name="Name" value="Z147_RX_DATA_RATE_2048"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a6"><param name="Name" value="Z147_RX_DATA_RATE_256"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a10"><param name="Name" value="Z147_RX_DATA_RATE_4096"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a7"><param name="Name" value="Z147_RX_DATA_RATE_512"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a4"><param name="Name" value="Z147_RX_DATA_RATE_64"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a11"><param name="Name" value="Z147_RX_DATA_RATE_8192"></OBJECT>
-  </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="tickRate"><param name="Name" value="tickRate"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structZ247__BLK__IRQLAT.html#m3"><param name="Name" value="Z247_BLK_IRQLAT"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a0"><param name="Name" value="ARINC717_SUB_1_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a1"><param name="Name" value="ARINC717_SUB_2_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a2"><param name="Name" value="ARINC717_SUB_3_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a3"><param name="Name" value="ARINC717_SUB_4_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a23"><param name="Name" value="G_CurrentTime"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a20"><param name="Name" value="G_DataByte"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a19"><param name="Name" value="G_DataLen"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a17"><param name="Name" value="G_Errors"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a24"><param name="Name" value="G_PrevTime"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a22"><param name="Name" value="G_RxFrameCnt"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a14"><param name="Name" value="G_sigCount"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a25"><param name="Name" value="G_StartParam"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a18"><param name="Name" value="G_TimingError"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a21"><param name="Name" value="G_TxFrameCnt"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a28"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a26"><param name="Name" value="PrintError"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a13"><param name="Name" value="RCSid"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a16"><param name="Name" value="rxDataArray"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a15"><param name="Name" value="rxPath"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a27"><param name="Name" value="SignalHandler"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a12"><param name="Name" value="Z147_FRAME_TIME"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a8"><param name="Name" value="Z147_RX_DATA_RATE_1024"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a5"><param name="Name" value="Z147_RX_DATA_RATE_128"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a9"><param name="Name" value="Z147_RX_DATA_RATE_2048"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a6"><param name="Name" value="Z147_RX_DATA_RATE_256"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a10"><param name="Name" value="Z147_RX_DATA_RATE_4096"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a7"><param name="Name" value="Z147_RX_DATA_RATE_512"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a4"><param name="Name" value="Z147_RX_DATA_RATE_64"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a11"><param name="Name" value="Z147_RX_DATA_RATE_8192"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a0"><param name="Name" value="ARINC717_SUB_1_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a1"><param name="Name" value="ARINC717_SUB_2_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a2"><param name="Name" value="ARINC717_SUB_3_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a3"><param name="Name" value="ARINC717_SUB_4_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a19"><param name="Name" value="G_DataByte"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a18"><param name="Name" value="G_DataLen"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a17"><param name="Name" value="G_Errors"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a21"><param name="Name" value="G_RxFrameCnt"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a13"><param name="Name" value="G_sigCount"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a14"><param name="Name" value="G_StartParam"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a20"><param name="Name" value="G_TxFrameCnt"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a23"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a22"><param name="Name" value="PrintError"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a12"><param name="Name" value="RCSid"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a16"><param name="Name" value="txDataArray"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a15"><param name="Name" value="txPath"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a8"><param name="Name" value="Z147_RX_DATA_RATE_1024"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a5"><param name="Name" value="Z147_RX_DATA_RATE_128"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a9"><param name="Name" value="Z147_RX_DATA_RATE_2048"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a6"><param name="Name" value="Z147_RX_DATA_RATE_256"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a10"><param name="Name" value="Z147_RX_DATA_RATE_4096"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a7"><param name="Name" value="Z147_RX_DATA_RATE_512"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a4"><param name="Name" value="Z147_RX_DATA_RATE_64"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a11"><param name="Name" value="Z147_RX_DATA_RATE_8192"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="tlsErrorSig"><param name="Name" value="tlsErrorSig"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structLL__HANDLE.html#m33"><param name="Name" value="LL_HANDLE"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="txDataArray"><param name="Name" value="txDataArray"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a16"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a16"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a16"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a16"><param name="Name" value="z147_example.c"></OBJECT>
-  </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="txFrameCnt"><param name="Name" value="txFrameCnt"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structLL__HANDLE.html#m43"><param name="Name" value="LL_HANDLE"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="txPath"><param name="Name" value="txPath"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a15"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a15"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a15"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a15"><param name="Name" value="z147_example.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="U_INT32_OR_64"><param name="Name" value="U_INT32_OR_64"></OBJECT>
   <UL>
@@ -793,44 +463,9 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__drv_8h.html#a6"><param name="Name" value="z147_drv.h"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html"><param name="Name" value="z147_example.c"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a0"><param name="Name" value="ARINC717_SUB_1_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a1"><param name="Name" value="ARINC717_SUB_2_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a2"><param name="Name" value="ARINC717_SUB_3_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a3"><param name="Name" value="ARINC717_SUB_4_SYNC"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a19"><param name="Name" value="G_DataLen"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a18"><param name="Name" value="G_Errors"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a21"><param name="Name" value="G_RxDataByte"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a23"><param name="Name" value="G_RxFrameCnt"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a13"><param name="Name" value="G_sigCount"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a20"><param name="Name" value="G_TxDataByte"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a22"><param name="Name" value="G_TxFrameCnt"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a26"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a24"><param name="Name" value="PrintError"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a12"><param name="Name" value="RCSid"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a17"><param name="Name" value="rxDataArray"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a14"><param name="Name" value="rxPath"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a25"><param name="Name" value="SignalHandler"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a16"><param name="Name" value="txDataArray"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a15"><param name="Name" value="txPath"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a8"><param name="Name" value="Z147_RX_DATA_RATE_1024"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a5"><param name="Name" value="Z147_RX_DATA_RATE_128"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a9"><param name="Name" value="Z147_RX_DATA_RATE_2048"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a6"><param name="Name" value="Z147_RX_DATA_RATE_256"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a10"><param name="Name" value="Z147_RX_DATA_RATE_4096"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a7"><param name="Name" value="Z147_RX_DATA_RATE_512"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a4"><param name="Name" value="Z147_RX_DATA_RATE_64"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a11"><param name="Name" value="Z147_RX_DATA_RATE_8192"></OBJECT>
-  </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="Z147_Exit"><param name="Name" value="Z147_Exit"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__drv_8c.html#a62"><param name="Name" value="z147_drv.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="Z147_FRAME_TIME"><param name="Name" value="Z147_FRAME_TIME"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a12"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a12"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="Z147_GetStat"><param name="Name" value="Z147_GetStat"></OBJECT>
   <UL>
@@ -906,83 +541,35 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="Z147_RX_DATA_RATE_1024"><param name="Name" value="Z147_RX_DATA_RATE_1024"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a8"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a8"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a8"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a8"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a8"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__drv_8c.html#a49"><param name="Name" value="z147_drv.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a8"><param name="Name" value="z147_example.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="Z147_RX_DATA_RATE_128"><param name="Name" value="Z147_RX_DATA_RATE_128"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a5"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a5"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a5"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a5"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a5"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__drv_8c.html#a46"><param name="Name" value="z147_drv.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a5"><param name="Name" value="z147_example.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="Z147_RX_DATA_RATE_2048"><param name="Name" value="Z147_RX_DATA_RATE_2048"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a9"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a9"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a9"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a9"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a9"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__drv_8c.html#a50"><param name="Name" value="z147_drv.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a9"><param name="Name" value="z147_example.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="Z147_RX_DATA_RATE_256"><param name="Name" value="Z147_RX_DATA_RATE_256"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a6"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a6"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a6"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a6"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a6"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__drv_8c.html#a47"><param name="Name" value="z147_drv.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a6"><param name="Name" value="z147_example.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="Z147_RX_DATA_RATE_4096"><param name="Name" value="Z147_RX_DATA_RATE_4096"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a10"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a10"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a10"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a10"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a10"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__drv_8c.html#a51"><param name="Name" value="z147_drv.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a10"><param name="Name" value="z147_example.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="Z147_RX_DATA_RATE_512"><param name="Name" value="Z147_RX_DATA_RATE_512"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a7"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a7"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a7"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a7"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a7"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__drv_8c.html#a48"><param name="Name" value="z147_drv.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a7"><param name="Name" value="z147_example.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="Z147_RX_DATA_RATE_64"><param name="Name" value="Z147_RX_DATA_RATE_64"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a4"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a4"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a4"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a4"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a4"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__drv_8c.html#a45"><param name="Name" value="z147_drv.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a4"><param name="Name" value="z147_example.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="Z147_RX_DATA_RATE_8192"><param name="Name" value="Z147_RX_DATA_RATE_8192"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__rx__part_8c.html#a11"><param name="Name" value="rate_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="rate__test__tx__part_8c.html#a11"><param name="Name" value="rate_test_tx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="sync__test_8c.html#a11"><param name="Name" value="sync_test.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__rx__part_8c.html#a11"><param name="Name" value="timing_test_rx_part.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="timing__test__tx__part_8c.html#a11"><param name="Name" value="timing_test_tx_part.c"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__drv_8c.html#a52"><param name="Name" value="z147_drv.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z147__example_8c.html#a11"><param name="Name" value="z147_example.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="Z147_RX_DATA_RATE_MASK"><param name="Name" value="Z147_RX_DATA_RATE_MASK"></OBJECT>
   <UL>

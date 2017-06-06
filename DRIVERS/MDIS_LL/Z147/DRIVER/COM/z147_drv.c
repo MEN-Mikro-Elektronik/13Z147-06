@@ -439,12 +439,12 @@ static int32 Z147_Write(
 /****************************** Z147_SetStat *********************************/
 /** Set the driver status
  *
- *  The driver supports \ref getstat_setstat_codes "these status codes"
+ *  The driver supports \ref rx_getstat_setstat_codes "these status codes"
  *  in addition to the standard codes (see mdis_api.h).
  *  Note: only inputs are able fire an interrupt
  *
  *  \param llHdl         \IN  low-level handle
- *  \param code          \IN  \ref getstat_setstat_codes "status code"
+ *  \param code          \IN  \ref rx_getstat_setstat_codes "status code"
  *  \param ch            \IN  current channel
  *  \param value32_or_64 \IN  data or pointer to block data structure
  *                            (M_SG_BLOCK) for block status codes
@@ -644,12 +644,12 @@ static int32 Z147_SetStat(
 /****************************** Z147_GetStat *********************************/
 /** Get the driver status
  *
- *  The driver supports \ref getstat_setstat_codes "these status codes"
+ *  The driver supports \ref rx_getstat_setstat_codes "these status codes"
  *  in addition to the standard codes (see mdis_api.h).
  *  Getstat Z147_IRQ_LAST_REQUEST will return the last IRQ request mask
  *  and clear it than.
  *  \param llHdl             \IN  low-level handle
- *  \param code              \IN  \ref getstat_setstat_codes "status code"
+ *  \param code              \IN  \ref rx_getstat_setstat_codes "status code"
  *  \param ch                \IN  current channel
  *  \param value32_or_64P    \IN  pointer to block data structure (M_SG_BLOCK) for
  *                                block status codes
@@ -1246,7 +1246,7 @@ static void ConfigureDefault( LL_HANDLE *llHdl )
  *  Set transmit data rate according to the user configuration.
  *
  *  \param llHdl      \IN  low-level handle
- *  \param result     \OUT result of the operation; 0 on success and -1 on error
+ *  \param rxSpeed    \IN  rx speed
  *  \return           \OUT uint32 data
  */
 int SetDataRate( LL_HANDLE *llHdl, u_int8 rxSpeed){

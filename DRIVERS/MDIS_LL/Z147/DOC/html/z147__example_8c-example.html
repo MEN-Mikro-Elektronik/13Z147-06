@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>MEN - 13Z147 MDIS Driver - Example Documentation</title>
+<title>MEN - Z147 MDIS Driver Package - Example Documentation</title>
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
 <meta name="Language" content="en, english">
 <meta name="Copyright" content="All material copyright MEN Mikro Elektronik GmbH">
@@ -12,7 +12,7 @@
 <div class="left_to_right" style="padding-top: 6px; background-color: #F0F0F0; height: 110px; border-bottom: 2px solid #D1D1D2;">
 	<!-- Titel -->
 	<img src="menlogo.gif" alt="MEN" style="float: left; height: 103px; width: 155px; margin: 0px;"></a>
-	<h1 style="margin: 0px; padding-top: 35px; padding-bottom: 0px;">13Z147 MDIS Driver &nbsp; </h1>
+	<h1 style="margin: 0px; padding-top: 35px; padding-bottom: 0px;">Z147 MDIS Driver Package &nbsp; </h1>
 	<h3>Example Documentation</h3>
 </div>
 
@@ -81,21 +81,21 @@
 <span class="comment">/*--------------------------------------+</span>
 <span class="comment">|   PROTOTYPES                          |</span>
 <span class="comment">+--------------------------------------*/</span>
-<span class="keyword">static</span> <span class="keywordtype">void</span> <a name="a0"></a><a class="code" href="z147__example_8c.html#a24">PrintError</a>(<span class="keywordtype">char</span> *info);
-<span class="keyword">static</span> <span class="keywordtype">void</span> __MAPILIB <a name="a1"></a><a class="code" href="z147__example_8c.html#a25">SignalHandler</a>( u_int32 sig );
-<a class="code" href="z147__drv_8h.html#a19">MDIS_PATH</a> <a class="code" href="z147__example_8c.html#a14">rxPath</a>;
-<a class="code" href="z147__drv_8h.html#a19">MDIS_PATH</a> <a class="code" href="z147__example_8c.html#a15">txPath</a>;
-u_int16 <a class="code" href="z147__example_8c.html#a16">txDataArray</a>[32768];
-u_int16 <a class="code" href="z147__example_8c.html#a17">rxDataArray</a>[32768];
-<span class="keywordtype">int</span> <a class="code" href="z147__example_8c.html#a18">G_Errors</a> = 0;
-u_int32 <a class="code" href="z147__example_8c.html#a19">G_DataLen</a> = 0;
-u_int8 <a class="code" href="z147__example_8c.html#a20">G_TxDataByte</a> = 0;
-u_int8 <a class="code" href="z147__example_8c.html#a21">G_RxDataByte</a> = 0;
-u_int32 <a class="code" href="z147__example_8c.html#a22">G_TxFrameCnt</a> = 0;
-u_int32 <a class="code" href="z147__example_8c.html#a23">G_RxFrameCnt</a> = 0;
+<span class="keyword">static</span> <span class="keywordtype">void</span> PrintError(<span class="keywordtype">char</span> *info);
+<span class="keyword">static</span> <span class="keywordtype">void</span> __MAPILIB SignalHandler( u_int32 sig );
+<a class="code" href="z147__drv_8h.html#a19">MDIS_PATH</a> rxPath;
+<a class="code" href="z147__drv_8h.html#a19">MDIS_PATH</a> txPath;
+u_int16 txDataArray[32768];
+u_int16 rxDataArray[32768];
+<span class="keywordtype">int</span> G_Errors = 0;
+u_int32 G_DataLen = 0;
+u_int8 G_TxDataByte = 0;
+u_int8 G_RxDataByte = 0;
+u_int32 G_TxFrameCnt = 0;
+u_int32 G_RxFrameCnt = 0;
 
 <span class="comment">/********************************* main ************************************/</span>
-<span class="keywordtype">int</span> <a name="a2"></a><a class="code" href="z147__example_8c.html#a26">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])
+<span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])
 {
 
     int32 irqCount;
@@ -127,16 +127,16 @@ u_int32 <a class="code" href="z147__example_8c.html#a23">G_RxFrameCnt</a> = 0;
 
     rxDevice = argv[1];
     txDevice = argv[2];
-    <a class="code" href="z147__example_8c.html#a19">G_DataLen</a> = 256;
+    G_DataLen = 256;
     <span class="comment">/*--------------------+</span>
 <span class="comment">    |  open rxPath          |</span>
 <span class="comment">    +--------------------*/</span>
-    <span class="keywordflow">if</span> ((<a class="code" href="z147__example_8c.html#a14">rxPath</a> = M_open(rxDevice)) &lt; 0) {
-        <a class="code" href="z147__example_8c.html#a24">PrintError</a>(<span class="stringliteral">"open"</span>);
+    <span class="keywordflow">if</span> ((rxPath = M_open(rxDevice)) &lt; 0) {
+        PrintError(<span class="stringliteral">"open"</span>);
         <span class="keywordflow">return</span>(1);
     }
-    <span class="keywordflow">if</span> ((<a class="code" href="z147__example_8c.html#a15">txPath</a> = M_open(txDevice)) &lt; 0) {
-        <a class="code" href="z147__example_8c.html#a24">PrintError</a>(<span class="stringliteral">"open"</span>);
+    <span class="keywordflow">if</span> ((txPath = M_open(txDevice)) &lt; 0) {
+        PrintError(<span class="stringliteral">"open"</span>);
         <span class="keywordflow">return</span>(1);
     }
 
@@ -148,28 +148,28 @@ u_int32 <a class="code" href="z147__example_8c.html#a23">G_RxFrameCnt</a> = 0;
     UOS_SigInstall( UOS_SIG_USR1 );
     result = M_setstat(rxPath, Z147_SET_SIGNAL, UOS_SIG_USR1);
     <span class="keywordflow">if</span>(result != 0){
-        <a class="code" href="z147__example_8c.html#a18">G_Errors</a>++;
+        G_Errors++;
     }
         result = M_setstat(txPath, Z247_TX_DATA_RATE, dataRate);
         <span class="keywordflow">if</span>(result != 0){
             printf(<span class="stringliteral">"Setting transmit data rate failed.\n"</span>);
-            <a class="code" href="z147__example_8c.html#a18">G_Errors</a>++;
+            G_Errors++;
         }
         result = M_setstat(rxPath, Z147_RX_DATA_RATE, dataRate);
         <span class="keywordflow">if</span>(result != 0){
             printf(<span class="stringliteral">"Setting receive data rate failed.\n"</span>);
-            <a class="code" href="z147__example_8c.html#a18">G_Errors</a>++;
+            G_Errors++;
         }
-    <a class="code" href="z147__example_8c.html#a20">G_TxDataByte</a> = 0;
+    G_TxDataByte = 0;
     <span class="keywordflow">for</span>(k=0;k&lt;10;k++){
         printf(<span class="stringliteral">"\n"</span>);
         printf(<span class="stringliteral">"################### Test Run-%d ################\n"</span>, k+1);
         printf(<span class="stringliteral">"----------------- Transmit -----------------\n"</span>);
         printf(<span class="stringliteral">"User data length = %d and dataptr = 0x%x\n"</span>, G_DataLen, txDataArray);
-        <a class="code" href="z147__example_8c.html#a20">G_TxDataByte</a> = 0;
-        <span class="keywordflow">for</span>(i=0;i&lt;(<a class="code" href="z147__example_8c.html#a19">G_DataLen</a>-4);i++){
-            <span class="keywordflow">if</span>(i==<a class="code" href="z147__example_8c.html#a20">G_TxDataByte</a>){
-                <a class="code" href="z147__example_8c.html#a16">txDataArray</a>[i] = <a class="code" href="z147__example_8c.html#a20">G_TxDataByte</a>++;
+        G_TxDataByte = 0;
+        <span class="keywordflow">for</span>(i=0;i&lt;(G_DataLen-4);i++){
+            <span class="keywordflow">if</span>(i==G_TxDataByte){
+                txDataArray[i] = G_TxDataByte++;
             }
 
         }
@@ -180,7 +180,7 @@ u_int32 <a class="code" href="z147__example_8c.html#a23">G_RxFrameCnt</a> = 0;
             printf(<span class="stringliteral">"Transmitted %d bytes successfully\n"</span>, G_DataLen *2);
         }<span class="keywordflow">else</span>{
             printf(<span class="stringliteral">"Write failed with result %d\n"</span>, result);
-            <a class="code" href="z147__example_8c.html#a18">G_Errors</a>++;
+            G_Errors++;
         }
         printf(<span class="stringliteral">"--------------------------------\n"</span>);
         printf(<span class="stringliteral">"\n"</span>);
@@ -196,7 +196,7 @@ u_int32 <a class="code" href="z147__example_8c.html#a23">G_RxFrameCnt</a> = 0;
             }
 
             <span class="keywordflow">if</span>(result != 0){
-                <a class="code" href="z147__example_8c.html#a18">G_Errors</a>++;
+                G_Errors++;
             }
             <span class="keywordflow">if</span>(isSync){
                 printf(<span class="stringliteral">"Is rx in sync = %d\n"</span>, isSync);
@@ -206,24 +206,24 @@ u_int32 <a class="code" href="z147__example_8c.html#a23">G_RxFrameCnt</a> = 0;
             }
         }
         printf(<span class="stringliteral">"G_sigCount = %d\n"</span>, G_sigCount);
-        <a class="code" href="z147__example_8c.html#a22">G_TxFrameCnt</a>++;
+        G_TxFrameCnt++;
     }
     
 
     result = M_setstat(txPath, Z247_DISABLE_TX, 1);
     <span class="keywordflow">if</span>(result != 0){
-        <a class="code" href="z147__example_8c.html#a18">G_Errors</a>++;
+        G_Errors++;
     }
     result = M_setstat(rxPath, Z147_DISABLE_RX, 1);
     <span class="keywordflow">if</span>(result != 0){
-        <a class="code" href="z147__example_8c.html#a18">G_Errors</a>++;
+        G_Errors++;
     }
     printf(<span class="stringliteral">"-------------------------------------------\n"</span>);
     printf(<span class="stringliteral">"-------------------------------------------\n\n"</span>);
     printf(<span class="stringliteral">"Transmit frame count : %d\n"</span>, G_TxFrameCnt);
     printf(<span class="stringliteral">"Receive frame count : %d\n"</span>, G_RxFrameCnt);
     printf(<span class="stringliteral">"Test Result : "</span>);
-    <span class="keywordflow">if</span>(<a class="code" href="z147__example_8c.html#a18">G_Errors</a> != 0){
+    <span class="keywordflow">if</span>(G_Errors != 0){
         printf(<span class="stringliteral">"FAILED\n"</span>);
     }<span class="keywordflow">else</span>{
         printf(<span class="stringliteral">"PASSED\n"</span>);
@@ -233,23 +233,23 @@ u_int32 <a class="code" href="z147__example_8c.html#a23">G_RxFrameCnt</a> = 0;
 
 
     <span class="keywordflow">if</span> (M_close(rxPath) &lt; 0){
-        <a class="code" href="z147__example_8c.html#a24">PrintError</a>(<span class="stringliteral">"close"</span>);
+        PrintError(<span class="stringliteral">"close"</span>);
     }
     <span class="keywordflow">if</span> (M_close(txPath) &lt; 0){
-        <a class="code" href="z147__example_8c.html#a24">PrintError</a>(<span class="stringliteral">"close"</span>);
+        PrintError(<span class="stringliteral">"close"</span>);
     }
 
     <span class="keywordflow">return</span>(0);
 }
 
 <span class="comment">/********************************* PrintError ******************************/</span>
-<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="z147__example_8c.html#a24">PrintError</a>(<span class="keywordtype">char</span> *info)
+<span class="keyword">static</span> <span class="keywordtype">void</span> PrintError(<span class="keywordtype">char</span> *info)
 {
     printf(<span class="stringliteral">"*** can't %s: %s\n"</span>, info, M_errstring(UOS_ErrnoGet()));
 }
 
 <span class="comment">/**********************************************************************/</span>
-<span class="keyword">static</span> <span class="keywordtype">void</span> __MAPILIB <a class="code" href="z147__example_8c.html#a25">SignalHandler</a>( u_int32 sig )
+<span class="keyword">static</span> <span class="keywordtype">void</span> __MAPILIB SignalHandler( u_int32 sig )
 {
     int32 result = 0;
     int32 i=0;
@@ -259,36 +259,36 @@ u_int32 <a class="code" href="z147__example_8c.html#a23">G_RxFrameCnt</a> = 0;
         ++G_sigCount;
         result = M_getblock( rxPath, (u_int8*)rxDataArray, (G_DataLen *2) );
         <span class="keywordflow">if</span>(result &lt; 0){
-            <a class="code" href="z147__example_8c.html#a18">G_Errors</a>++;
+            G_Errors++;
         }
         <span class="comment">/* program lower five ports as outputs, others as inputs */</span>
         <span class="keywordflow">if</span>(result &gt; 0){
             printf(<span class="stringliteral">"----------------- Receive -----------------\n"</span>);
             printf(<span class="stringliteral">"Receiving = %d bytes data\n"</span>, result);
-            <a class="code" href="z147__example_8c.html#a21">G_RxDataByte</a> = 0;
+            G_RxDataByte = 0;
             <span class="comment">/* Add 4 sync words and ignore them in check. */</span>
             <span class="keywordflow">for</span>(j=0;j&lt;(result/2);j++){
-                <span class="keywordflow">if</span>((<a class="code" href="z147__example_8c.html#a17">rxDataArray</a>[j] != <a class="code" href="z147__example_8c.html#a0">ARINC717_SUB_1_SYNC</a>) &amp;&amp;
-                        (<a class="code" href="z147__example_8c.html#a17">rxDataArray</a>[j] != <a class="code" href="z147__example_8c.html#a1">ARINC717_SUB_2_SYNC</a>) &amp;&amp;
-                        (<a class="code" href="z147__example_8c.html#a17">rxDataArray</a>[j] != <a class="code" href="z147__example_8c.html#a2">ARINC717_SUB_3_SYNC</a>) &amp;&amp;
-                        (<a class="code" href="z147__example_8c.html#a17">rxDataArray</a>[j] != <a class="code" href="z147__example_8c.html#a3">ARINC717_SUB_4_SYNC</a>))
+                <span class="keywordflow">if</span>((rxDataArray[j] != ARINC717_SUB_1_SYNC) &amp;&amp;
+                        (rxDataArray[j] != ARINC717_SUB_2_SYNC) &amp;&amp;
+                        (rxDataArray[j] != ARINC717_SUB_3_SYNC) &amp;&amp;
+                        (rxDataArray[j] != ARINC717_SUB_4_SYNC))
                 {
-                    <span class="keywordflow">if</span>(<a class="code" href="z147__example_8c.html#a17">rxDataArray</a>[j] != (G_RxDataByte)){
+                    <span class="keywordflow">if</span>(rxDataArray[j] != (G_RxDataByte)){
                         printf(<span class="stringliteral">"Expected 0x%x but received rxDataArray[%d] = 0x%x\n"</span>,(G_RxDataByte), j, rxDataArray[j]);
-                        <a class="code" href="z147__example_8c.html#a18">G_Errors</a>++;
+                        G_Errors++;
                     }
                     <span class="keywordflow">if</span>((j&lt;10) || (j&gt;((result/2) - 5))){
                         printf(<span class="stringliteral">" [%d]0x%x"</span>,j, rxDataArray[j]);
                     }
-                    <a class="code" href="z147__example_8c.html#a21">G_RxDataByte</a>++;
+                    G_RxDataByte++;
                 }
                 <span class="comment">/* Reset the buffer. */</span>
-                <a class="code" href="z147__example_8c.html#a17">rxDataArray</a>[j] = 0;
+                rxDataArray[j] = 0;
             }
             printf(<span class="stringliteral">"\n"</span>);
             printf(<span class="stringliteral">"Received %d bytes successfully\n"</span>, result);
             printf(<span class="stringliteral">"--------------------------------\n"</span>);
-            <a class="code" href="z147__example_8c.html#a23">G_RxFrameCnt</a>++;
+            G_RxFrameCnt++;
         }<span class="keywordflow">else</span>{
             printf(<span class="stringliteral">"Read failed with the result = %d\n"</span>, result);
         }
@@ -302,8 +302,8 @@ u_int32 <a class="code" href="z147__example_8c.html#a23">G_RxFrameCnt</a> = 0;
 <div class="footer">
 <!-- Footer -->
 	<p class="footer">
-	Generated for 13Z147 MDIS Driver using <a href="http://www.doxygen.org">doxygen</a>.<br>
-	Copyright &copy; 2015 <a href="http://www.men.de">MEN Mikro Elektronik GmbH</a>. All Rights Reserved.
+	Generated for Z147 MDIS Driver Package using <a href="http://www.doxygen.org">doxygen</a>.<br>
+	Copyright &copy; 2017 <a href="http://www.men.de">MEN Mikro Elektronik GmbH</a>. All Rights Reserved.
 	</p>
 </div>
 

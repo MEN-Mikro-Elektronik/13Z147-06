@@ -414,12 +414,12 @@ static int32 Z247_Write(
 /****************************** Z247_SetStat *********************************/
 /** Set the driver status
  *
- *  The driver supports \ref getstat_setstat_codes "these status codes"
+ *  The driver supports \ref tx_getstat_setstat_codes "these status codes"
  *  in addition to the standard codes (see mdis_api.h).
  *  Note: only inputs are able fire an interrupt
  *
  *  \param llHdl         \IN  low-level handle
- *  \param code          \IN  \ref getstat_setstat_codes "status code"
+ *  \param code          \IN  \ref tx_getstat_setstat_codes "status code"
  *  \param ch            \IN  current channel
  *  \param value32_or_64 \IN  data or pointer to block data structure
  *                            (M_SG_BLOCK) for block status codes
@@ -577,10 +577,10 @@ static int32 Z247_SetStat(
 /****************************** Z247_GetStat *********************************/
 /** Get the driver status
  *
- *  The driver supports \ref getstat_setstat_codes "these status codes"
+ *  The driver supports \ref tx_getstat_setstat_codes "these status codes"
  *  in addition to the standard codes (see mdis_api.h).
  *  \param llHdl             \IN  low-level handle
- *  \param code              \IN  \ref getstat_setstat_codes "status code"
+ *  \param code              \IN  \ref tx_getstat_setstat_codes "status code"
  *  \param ch                \IN  current channel
  *  \param value32_or_64P    \IN  pointer to block data structure (M_SG_BLOCK) for
  *                                block status codes
@@ -1139,7 +1139,7 @@ int HwWrite(LL_HANDLE    *llHdl){
  *  Set transmit data rate according to the user configuration.
  *
  *  \param llHdl      \IN  low-level handle
- *  \param result     \OUT result of the operation; 0 on success and -1 on error
+ *  \param txSpeed    \IN  tx speed
  *  \return           \OUT uint32 data
  */
 int SetDataRate( LL_HANDLE *llHdl, u_int8 txSpeed){
@@ -1255,7 +1255,6 @@ int SetDataRate( LL_HANDLE *llHdl, u_int8 txSpeed){
  *  Read one word from the ring buffer.
  *
  *  \param llHdl      \IN  low-level handle
- *  \param result     \OUT result of the operation; 0 on success and -1 on error
  *  \return           \OUT uint32 data
  */
 u_int16 ReadFromBuffer( LL_HANDLE *llHdl){
