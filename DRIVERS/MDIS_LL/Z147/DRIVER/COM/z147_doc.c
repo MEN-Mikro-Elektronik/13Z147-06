@@ -228,7 +228,6 @@
 
     \subsection z147_example  Simple example for using the driver
     z147_example.c (see example section)
-
 */
 
 /** \example z147_example.c
