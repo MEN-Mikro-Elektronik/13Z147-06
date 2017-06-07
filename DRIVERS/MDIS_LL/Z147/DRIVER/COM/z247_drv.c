@@ -1078,7 +1078,7 @@ int HwWrite(LL_HANDLE    *llHdl){
 		/* Acknowledge the the data before enabling the queue space interrupt. */
 		MWRITE_D16(llHdl->ma, Z247_TX_TXA_OFFSET, dataCount);
 		DBGWRT_2((DBH, "LL - Z247_Write:HWWrite Z247_TX_TXA_OFFSET = %d\n",dataCount));
-	} /* Else, do nothing. */
+	} /* Else, do nothing */
 
 	return result;
 }
