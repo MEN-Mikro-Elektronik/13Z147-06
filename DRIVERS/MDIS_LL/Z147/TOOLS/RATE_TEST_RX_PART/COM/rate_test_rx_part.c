@@ -77,7 +77,7 @@ int main(int argc, char *argv[])
 	int dataRate =0;
 	u_int32 data = 0;
 
-	if (argc < 1 || strcmp(argv[1],"-?")==0) {
+	if (argc < 2 || strcmp(argv[1],"-?")==0) {
 		printf("Syntax: z147_rate_test_rx <rxDevice> \n");
 		printf("Function: Z147 test tool for rate (rx part)\n");
 		return(1);

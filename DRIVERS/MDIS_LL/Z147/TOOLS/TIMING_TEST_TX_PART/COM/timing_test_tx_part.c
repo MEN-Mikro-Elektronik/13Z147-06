@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 	u_int8 dataByte = 0;
 	u_int32 txFrameCnt = 0;
 
-	if (argc < 1 || strcmp(argv[1],"-?")==0) {
+	if (argc < 2 || strcmp(argv[1],"-?")==0) {
 		printf("Syntax: z147_timing_test_tx <txDevice>\n");
 		printf("Function: Z147 test tool for timing (tx part)\n");
 		return(1);

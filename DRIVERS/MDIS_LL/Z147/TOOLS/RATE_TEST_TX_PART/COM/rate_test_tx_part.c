@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
 	u_int16 *txBuf = NULL;
 	u_int16 *rxBuf = NULL;
 
-	if (argc < 1 || strcmp(argv[1],"-?")==0) {
+	if (argc < 2 || strcmp(argv[1],"-?")==0) {
 		printf("Syntax: z147_rate_test_tx <txDevice>\n");
 		printf("Function: Z147 test tool for rate (tx part)\n");
 		return(1);
