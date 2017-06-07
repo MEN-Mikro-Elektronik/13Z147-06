@@ -97,16 +97,6 @@
 #define Z147_RX_LINE_STAT_IRQ		1			/**< Receive line status interrupt offset */
 #define Z147_RX_DATA_AVAIL_IRQ		2			/**< Receive data available interrupt offset */
 
-
-#define Z147_RX_DATA_RATE_64        0    /**< Set data rate of 64 words/sec. */
-#define Z147_RX_DATA_RATE_128       1    /**< Set data rate of 128 words/sec. */
-#define Z147_RX_DATA_RATE_256       2    /**< Set data rate of 256 words/sec. */
-#define Z147_RX_DATA_RATE_512       3    /**< Set data rate of 512 words/sec. */
-#define Z147_RX_DATA_RATE_1024      4    /**< Set data rate of 1024 words/sec. */
-#define Z147_RX_DATA_RATE_2048      5    /**< Set data rate of 2048 words/sec. */
-#define Z147_RX_DATA_RATE_4096      6    /**< Set data rate of 4096 words/sec. */
-#define Z147_RX_DATA_RATE_8192      7    /**< Set data rate of 8192 words/sec. */
-
 #define Z147_RX_TRIG_LVL_08   	    1    /**< Set trigger level to 8 words. */
 #define Z147_RX_TRIG_LVL_16   	    2    /**< Set trigger level to 16 words. */
 #define Z147_RX_TRIG_LVL_32         3    /**< Set trigger level to 32 words. */
@@ -134,8 +124,8 @@ typedef struct {
 	u_int32                 dbgLevel;       /**< debug level  */
 	DBG_HANDLE              *dbgHdl;        /**< debug handle */
 
-	OSS_SIG_HANDLE          *rxDataSig; 	/**< signal for port change */
-	OSS_SIG_HANDLE          *rxErrorSig; 	/**< signal for port change */
+	OSS_SIG_HANDLE          *rxDataSig; 	/**< data signal */
+	OSS_SIG_HANDLE          *rxErrorSig; 	/**< error signal */
 
 	/* toggle mode */
 	OSS_ALARM_HANDLE        *alarmHdl;      /**< alarm handle               */
@@ -395,7 +385,7 @@ static int32 Z147_Exit(
 /****************************** Z147_Read ************************************/
 /** Read a value from the device
  *
- *  The function is not supported
+ *  The function is not supported and always returns an ERR_LL_ILL_FUNC error.
  *
  *  \param llHdl      \IN  low-level handle
  *  \param ch         \IN  current channel
@@ -417,7 +407,7 @@ static int32 Z147_Read(
 /****************************** Z147_Write ***********************************/
 /** Description:  Write a value to the device
  *
- *  The function is not supported
+ *  The function is not supported and always returns an ERR_LL_ILL_FUNC error.
  *
  *  \param llHdl      \IN  low-level handle
  *  \param ch         \IN  current channel
@@ -857,6 +847,8 @@ static int32 Z147_BlockRead(
 /****************************** Z147_BlockWrite *****************************/
 /** Write a data block from the device
  *
+ *  The function is not supported and always returns an ERR_LL_ILL_FUNC error.
+ * 
  *  \param llHdl  	   \IN  low-level handle
  *  \param ch          \IN  current channel
  *  \param buf         \IN  data buffer
@@ -1220,7 +1212,6 @@ static void ConfigureDefault( LL_HANDLE *llHdl )
 
 	/* Configure RX LCR */
 	MWRITE_D8(llHdl->ma, Z147_RX_LCR_OFFSET, Z147_RX_LCR_DEFAULT);
-//	MWRITE_D8(llHdl->ma, Z147_RX_LCR_OFFSET, 0); // REMOVE (sync disable)
 
 	/* Enable the default interrupts */
 	MWRITE_D8(llHdl->ma, Z147_RX_IER_OFFSET, Z147_RX_IER_DEFAULT);
@@ -1230,8 +1221,9 @@ static void ConfigureDefault( LL_HANDLE *llHdl )
 
 	/* Reset the driver sync. */
 	llHdl->isDrvSync = 0;
+	
 	/* Clear the error register. */
-	MWRITE_D8(llHdl->ma, Z147_LSR_REG_OFFSET, 0xFF); // REMOVE
+	MWRITE_D8(llHdl->ma, Z147_LSR_REG_OFFSET, 0xFF); /* REMOVE */
 
 	MWRITE_D8(llHdl->ma, Z147_RX_RST_OFFSET, 0);
 

@@ -1,34 +1,28 @@
 /****************************************************************************
  ************                                                    ************
- ************                   Z147_EXAMPLE                     ************
+ ************                   Z147_TIMING_TEST_TX              ************
  ************                                                    ************
  ****************************************************************************/
 /*!
- *         \file z146_example.c
+ *         \file timing_test_tx_part.c
  *       \author Apatil
- *        $Date: 2009/07/10 13:40:12 $
- *    $Revision: 1.5 $
+ *        $Date: 2016/04/27 13:47:50 $
+ *    $Revision: 1.1 $
  *
- *       \brief  Simple example program for the Z147 driver
- *
- *               Reads and writes some values from/to GPIO ports,
- *               generating interrupts.
- *               Interrupts will be generated only on inputs. Thatsway
- *               normaly an external loopback from the outputs gpio[0]..[4]
- *               to gpio[5]..[7] is required.
+ *       \brief  Z147 test tool for timing (tx part)
  *
  *     Required: libraries: mdis_api, usr_oss
  *     \switches (none)
  */
 /*-------------------------------[ History ]--------------------------------
  *
- * $Log: z17_simp.c,v $
+ * $Log: timing_test_tx_part.c,v $
+ * Revision 1.1  2016/04/27 13:47:50  Apatil
+ * Initial Revision
  *
  *---------------------------------------------------------------------------
  * (c) Copyright 2003 by MEN mikro elektronik GmbH, Nuernberg, Germany
  ****************************************************************************/
-
-static const char RCSid[]="$Id: z147_simp.c,v 1.5 2009/07/10 13:40:12 CRuff Exp $";
 
 #include <stdio.h>
 #include <string.h>
@@ -41,47 +35,13 @@ static const char RCSid[]="$Id: z147_simp.c,v 1.5 2009/07/10 13:40:12 CRuff Exp 
 /*--------------------------------------+
 |   DEFINES                             |
 +--------------------------------------*/
-/* SYNC words */
-#define ARINC717_SUB_1_SYNC      0x247
-#define ARINC717_SUB_2_SYNC      0x5B8
-#define ARINC717_SUB_3_SYNC      0xA47
-#define ARINC717_SUB_4_SYNC      0xDB8
+#define MAX_DATA_LEN 		32768
 
-#define Z147_RX_DATA_RATE_64     0    /**< S  : Set data rate of 64 words/sec. */
-#define Z147_RX_DATA_RATE_128    1    /**< S  : Set data rate of 128 words/sec. */
-#define Z147_RX_DATA_RATE_256    2    /**< S  : Set data rate of 256 words/sec. */
-#define Z147_RX_DATA_RATE_512    3    /**< S  : Set data rate of 512 words/sec. */
-#define Z147_RX_DATA_RATE_1024   4    /**< S  : Set data rate of 1024 words/sec. */
-#define Z147_RX_DATA_RATE_2048   5    /**< S  : Set data rate of 2048 words/sec. */
-#define Z147_RX_DATA_RATE_4096   6    /**< S  : Set data rate of 4096 words/sec. */
-#define Z147_RX_DATA_RATE_8192   7    /**< S  : Set data rate of 8192 words/sec. */
-/*--------------------------------------+
-|   TYPDEFS                             |
-+--------------------------------------*/
-/* none */
-
-/*--------------------------------------+
-|   EXTERNALS                           |
-+--------------------------------------*/
-/* none */
-
-/*--------------------------------------+
-|   GLOBALS                             |
-+--------------------------------------*/
-static int G_sigCount = 0;
-u_int32 G_StartParam = 7;
 /*--------------------------------------+
 |   PROTOTYPES                          |
 +--------------------------------------*/
 static void PrintError(char *info);
 
-MDIS_PATH txPath;
-u_int16 txDataArray[32768];
-int G_Errors = 0;
-u_int32 G_DataLen = 0;
-u_int8 G_DataByte = 0;
-u_int32 G_TxFrameCnt = 0;
-u_int32 G_RxFrameCnt = 0;
 /********************************* main ************************************/
 /** Program main function
  *
@@ -92,108 +52,109 @@ u_int32 G_RxFrameCnt = 0;
  */
 int main(int argc, char *argv[])
 {
-
-	char	*txDevice;
+	char *txDevice;
 	int32 result = 0;
-	int32 isSync = 0;
 	u_int32 i = 0;
 	int j = 0;
 	int k = 0;
-	int dataRate =0;
+	int dataRate = 0;
 	u_int32 data = 0;
-
-
-	u_int16 *txBuf = NULL;
 	u_int16 *rxBuf = NULL;
-	printf("argc = %d\n",argc );
+	MDIS_PATH txPath;
+	u_int16 txDataArray[MAX_DATA_LEN];
+	int errors = 0;
+	u_int32 dataLen = 0;
+	u_int8 dataByte = 0;
+	u_int32 txFrameCnt = 0;
+
 	if (argc < 1 || strcmp(argv[1],"-?")==0) {
-		printf("Syntax: timing_test_tx_part <txDevice> \n");
-		printf("Function: Example program for using the Z147 driver\n");
-		printf("%s \n",RCSid );
+		printf("Syntax: z147_timing_test_tx <txDevice>\n");
+		printf("Function: Z147 test tool for timing (tx part)\n");
 		return(1);
 	}
 
-	printf("%s \n",RCSid );
 	txDevice = argv[1];
-
 
 	for(dataRate = 0; dataRate <= Z147_RX_DATA_RATE_8192; dataRate++){
 		/*--------------------+
-	    |  open rxPath        |
+	    |  open               |
 	    +--------------------*/
-
 		if ((txPath = M_open(txDevice)) < 0) {
 			PrintError("open");
 			return(1);
 		}
 		switch(dataRate){
 		case Z147_RX_DATA_RATE_64:
-			G_DataLen = 256;
+			dataLen = 256;
 			break;
 		case Z147_RX_DATA_RATE_128:
-			G_DataLen = 512;
+			dataLen = 512;
 			break;
 		case Z147_RX_DATA_RATE_256:
-			G_DataLen = 1024;
+			dataLen = 1024;
 			break;
 		case Z147_RX_DATA_RATE_512:
-			G_DataLen = 2048;
+			dataLen = 2048;
 			break;
 		case Z147_RX_DATA_RATE_1024:
-			G_DataLen = 4096;
+			dataLen = 4096;
 			break;
 		case Z147_RX_DATA_RATE_2048:
-			G_DataLen = 8192;
+			dataLen = 8192;
 			break;
 		case Z147_RX_DATA_RATE_4096:
-			G_DataLen = 16384;
+			dataLen = 16384;
 			break;
 		case Z147_RX_DATA_RATE_8192:
-			G_DataLen = 32768;
+			dataLen = 32768;
 			break;
 		default:
-			G_DataLen = 256;
+			dataLen = 256;
 			printf("Unknown dataRate = %d, setting default rate to 64.\n", dataRate);
 		}
 		result = M_setstat(txPath, Z247_TX_DATA_RATE, dataRate);
 		if(result != 0){
 			printf("Setting transmit data rate failed.\n");
-			G_Errors++;
+			errors++;
 		}
-
 
 		for(k=0;k<20;k++){
 			printf("\n");
-			printf("################### Test Run-%d (Data Rate-%d) ################\n", k+1, dataRate);
+			printf("################### Test Run-%d (Data Rate-%d) ################\n",
+				k+1, dataRate);
 			printf("----------------- Transmit -----------------\n");
-			G_DataByte = 0;
-			for(i=0;i<(G_DataLen - 4);i++){
-//				txDataArray[i] = (G_StartParam + G_DataByte++);
-				txDataArray[i] = (G_DataByte++);
-				if((i<10) || (i>((G_DataLen - 4) - 5))){
+			dataByte = 0;
+			
+			for(i=0;i<(dataLen - 4);i++){
+				txDataArray[i] = (dataByte++);
+				if((i<10) || (i>((dataLen - 4) - 5))){
 					printf(" 0x%x", txDataArray[i]);
 				}
 			}
-			G_StartParam++;
+
 			printf("\n");
 			printf("\n");
-			result = M_setblock(txPath, (u_int8*)txDataArray, (G_DataLen *2) - 8);
+			
+			result = M_setblock(txPath, (u_int8*)txDataArray, (dataLen *2) - 8);
 			if(result > 0){
-				printf("Transmitted %d bytes successfully\n", G_DataLen *2);
+				printf("Transmitted %d bytes successfully\n", dataLen *2);
 			}else{
 				printf("Write failed with result %d\n", result);
-				G_Errors++;
+				errors++;
 			}
+			
 			printf("--------------------------------\n");
 			printf("\n");
 
-			G_TxFrameCnt++;
+			txFrameCnt++;
 			UOS_Delay( 4000);
 		}
+		
 		UOS_Delay( 4000);
+		
 		result = M_setstat(txPath, Z247_DISABLE_TX, 1);
 		if(result != 0){
-			G_Errors++;
+			errors++;
 		}
 		if (M_close(txPath) < 0){
 			PrintError("close");
@@ -202,10 +163,10 @@ int main(int argc, char *argv[])
 
 	printf("-------------------------------------------\n");
 	printf("-------------------------------------------\n\n");
-	printf("Transmit frame count : %d\n", G_TxFrameCnt);
+	printf("Transmit frame count : %d\n", txFrameCnt);
 
 	printf("Test Result : ");
-	if(G_Errors != 0){
+	if(errors != 0){
 		printf("FAILED\n");
 	}else{
 		printf("PASSED\n");
@@ -225,4 +186,3 @@ static void PrintError(char *info)
 {
 	printf("*** can't %s: %s\n", info, M_errstring(UOS_ErrnoGet()));
 }
-

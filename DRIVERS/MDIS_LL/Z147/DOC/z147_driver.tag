@@ -308,194 +308,146 @@
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>Z147_RX_DATA_RATE_64</name>
+      <name>Z147_RX_TRIG_LVL_08</name>
       <anchor>a45</anchor>
       <arglist></arglist>
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>Z147_RX_DATA_RATE_128</name>
+      <name>Z147_RX_TRIG_LVL_16</name>
       <anchor>a46</anchor>
       <arglist></arglist>
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>Z147_RX_DATA_RATE_256</name>
+      <name>Z147_RX_TRIG_LVL_32</name>
       <anchor>a47</anchor>
       <arglist></arglist>
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>Z147_RX_DATA_RATE_512</name>
+      <name>Z147_RX_TRIG_LVL_64</name>
       <anchor>a48</anchor>
       <arglist></arglist>
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>Z147_RX_DATA_RATE_1024</name>
+      <name>Z147_RX_TRIG_LVL_128</name>
       <anchor>a49</anchor>
       <arglist></arglist>
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>Z147_RX_DATA_RATE_2048</name>
+      <name>Z147_RX_TRIG_LVL_256</name>
       <anchor>a50</anchor>
       <arglist></arglist>
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>Z147_RX_DATA_RATE_4096</name>
+      <name>Z147_RX_TRIG_LVL_512</name>
       <anchor>a51</anchor>
       <arglist></arglist>
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>Z147_RX_DATA_RATE_8192</name>
-      <anchor>a52</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>Z147_RX_TRIG_LVL_08</name>
-      <anchor>a53</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>Z147_RX_TRIG_LVL_16</name>
-      <anchor>a54</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>Z147_RX_TRIG_LVL_32</name>
-      <anchor>a55</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>Z147_RX_TRIG_LVL_64</name>
-      <anchor>a56</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>Z147_RX_TRIG_LVL_128</name>
-      <anchor>a57</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>Z147_RX_TRIG_LVL_256</name>
-      <anchor>a58</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>Z147_RX_TRIG_LVL_512</name>
-      <anchor>a59</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
       <name>USER_DATA_NOT_UPDATED</name>
-      <anchor>a60</anchor>
+      <anchor>a52</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z147_Init</name>
-      <anchor>a61</anchor>
+      <anchor>a53</anchor>
       <arglist>(DESC_SPEC *descSpec, OSS_HANDLE *osHdl, MACCESS *ma, OSS_SEM_HANDLE *devSemHdl, OSS_IRQ_HANDLE *irqHdl, LL_HANDLE **llHdlP)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z147_Exit</name>
-      <anchor>a62</anchor>
+      <anchor>a54</anchor>
       <arglist>(LL_HANDLE **llHdlP)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z147_Read</name>
-      <anchor>a63</anchor>
+      <anchor>a55</anchor>
       <arglist>(LL_HANDLE *llHdl, int32 ch, int32 *value)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z147_Write</name>
-      <anchor>a64</anchor>
+      <anchor>a56</anchor>
       <arglist>(LL_HANDLE *llHdl, int32 ch, int32 value)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z147_SetStat</name>
-      <anchor>a65</anchor>
+      <anchor>a57</anchor>
       <arglist>(LL_HANDLE *llHdl, int32 ch, int32 code, INT32_OR_64 value32_or_64)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z147_GetStat</name>
-      <anchor>a66</anchor>
+      <anchor>a58</anchor>
       <arglist>(LL_HANDLE *llHdl, int32 ch, int32 code, INT32_OR_64 *value32_or64P)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z147_BlockRead</name>
-      <anchor>a67</anchor>
+      <anchor>a59</anchor>
       <arglist>(LL_HANDLE *llHdl, int32 ch, void *buf, int32 size, int32 *nbrRdBytesP)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z147_BlockWrite</name>
-      <anchor>a68</anchor>
+      <anchor>a60</anchor>
       <arglist>(LL_HANDLE *llHdl, int32 ch, void *buf, int32 size, int32 *nbrWrBytesP)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z147_Irq</name>
-      <anchor>a69</anchor>
+      <anchor>a61</anchor>
       <arglist>(LL_HANDLE *llHdl)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z147_Info</name>
-      <anchor>a70</anchor>
+      <anchor>a62</anchor>
       <arglist>(int32 infoType,...)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>char *</type>
       <name>Ident</name>
-      <anchor>a71</anchor>
+      <anchor>a63</anchor>
       <arglist>(void)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Cleanup</name>
-      <anchor>a72</anchor>
+      <anchor>a64</anchor>
       <arglist>(LL_HANDLE *llHdl, int32 retCode)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>void</type>
       <name>ConfigureDefault</name>
-      <anchor>a73</anchor>
+      <anchor>a65</anchor>
       <arglist>(LL_HANDLE *llHdl)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int</type>
       <name>SetDataRate</name>
-      <anchor>a74</anchor>
+      <anchor>a66</anchor>
       <arglist>(LL_HANDLE *llHdl, u_int8 rxSpeed)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>void</type>
       <name>RegStatus</name>
-      <anchor>a75</anchor>
+      <anchor>a67</anchor>
       <arglist>(LL_HANDLE *llHdl)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>LL_GetEntry</name>
-      <anchor>a76</anchor>
+      <anchor>a68</anchor>
       <arglist>(LL_ENTRY *drvP)#else extern void __Z147_GetEntry(LL_ENTRY *drvP)#endif</arglist>
     </member>
   </compound>
@@ -589,38 +541,110 @@
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>_Z147_GLOBNAME</name>
+      <name>Z147_RX_DATA_RATE_64</name>
       <anchor>a14</anchor>
-      <arglist>(var, name)</arglist>
+      <arglist></arglist>
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>Z147_GLOBNAME</name>
+      <name>Z147_RX_DATA_RATE_128</name>
       <anchor>a15</anchor>
-      <arglist>(var, name)</arglist>
+      <arglist></arglist>
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>__Z147_GetEntry</name>
+      <name>Z147_RX_DATA_RATE_256</name>
       <anchor>a16</anchor>
       <arglist></arglist>
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>INT32_OR_64</name>
+      <name>Z147_RX_DATA_RATE_512</name>
       <anchor>a17</anchor>
       <arglist></arglist>
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>U_INT32_OR_64</name>
+      <name>Z147_RX_DATA_RATE_1024</name>
       <anchor>a18</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>Z147_RX_DATA_RATE_2048</name>
+      <anchor>a19</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>Z147_RX_DATA_RATE_4096</name>
+      <anchor>a20</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>Z147_RX_DATA_RATE_8192</name>
+      <anchor>a21</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>Z147_ARINC717_SUB_1_SYNC</name>
+      <anchor>a22</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>Z147_ARINC717_SUB_2_SYNC</name>
+      <anchor>a23</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>Z147_ARINC717_SUB_3_SYNC</name>
+      <anchor>a24</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>Z147_ARINC717_SUB_4_SYNC</name>
+      <anchor>a25</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>_Z147_GLOBNAME</name>
+      <anchor>a26</anchor>
+      <arglist>(var, name)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>Z147_GLOBNAME</name>
+      <anchor>a27</anchor>
+      <arglist>(var, name)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>__Z147_GetEntry</name>
+      <anchor>a28</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>INT32_OR_64</name>
+      <anchor>a29</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>U_INT32_OR_64</name>
+      <anchor>a30</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>INT32_OR_64</type>
       <name>MDIS_PATH</name>
-      <anchor>a19</anchor>
+      <anchor>a31</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -1072,7 +1096,6 @@
     <name>z247_drv.h</name>
     <path>D:/WORK/WINDOWS/INCLUDE/COM/MEN/</path>
     <filename>z247__drv_8h</filename>
-    <class kind="struct">Z247_BLK_IRQLAT</class>
     <member kind="define">
       <type>#define</type>
       <name>Z247_SET_PORTS</name>
@@ -1501,52 +1524,6 @@
       <type>u_int32</type>
       <name>txFrameCnt</name>
       <anchor>m43</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>Z247_BLK_IRQLAT</name>
-    <filename>structZ247__BLK__IRQLAT.html</filename>
-    <member kind="variable">
-      <type>u_int32</type>
-      <name>outPort</name>
-      <anchor>m0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>u_int32</type>
-      <name>inPort</name>
-      <anchor>m1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>u_int32</type>
-      <name>irqs2fire</name>
-      <anchor>m2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>u_int32</type>
-      <name>tickRate</name>
-      <anchor>m3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>u_int32</type>
-      <name>startTick</name>
-      <anchor>m4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>u_int32</type>
-      <name>stopTick</name>
-      <anchor>m5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>u_int32</type>
-      <name>irqsRcved</name>
-      <anchor>m6</anchor>
       <arglist></arglist>
     </member>
   </compound>

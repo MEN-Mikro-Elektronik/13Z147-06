@@ -65,31 +65,31 @@
 			<makefilepath>Z147/EXAMPLE/Z147_EXAMPLE/COM/program.mak</makefilepath>
 		</swmodule>
 		<swmodule>
-			<name>timing_test_tx_part</name>
+			<name>z147_timing_test_tx</name>
 			<description>Timing test transmit part.</description>
 			<type>Driver Specific Tool</type>
 			<makefilepath>Z147/TOOLS/TIMING_TEST_TX_PART/COM/program.mak</makefilepath>
 		</swmodule>
 		<swmodule>
-			<name>timing_test_rx_part</name>
+			<name>z147_timing_test_rx</name>
 			<description>Timing test receive part.</description>
 			<type>Driver Specific Tool</type>
 			<makefilepath>Z147/TOOLS/TIMING_TEST_RX_PART/COM/program.mak</makefilepath>
 		</swmodule>
 		<swmodule>
-			<name>rate_test_tx_part</name>
+			<name>z147_rate_test_tx</name>
 			<description>Rate test transmit part.</description>
 			<type>Driver Specific Tool</type>
 			<makefilepath>Z147/TOOLS/RATE_TEST_TX_PART/COM/program.mak</makefilepath>
 		</swmodule>
 		<swmodule>
-			<name>rate_test_rx_part</name>
+			<name>z147_rate_test_rx</name>
 			<description>Rate test receive part.</description>
 			<type>Driver Specific Tool</type>
 			<makefilepath>Z147/TOOLS/RATE_TEST_RX_PART/COM/program.mak</makefilepath>
 		</swmodule>
 		<swmodule>
-			<name>sync_test</name>
+			<name>z147_sync_test</name>
 			<description>Sync test of the receiver.</description>
 			<type>Driver Specific Tool</type>
 			<makefilepath>Z147/TOOLS/SYNC_TEST/COM/program.mak</makefilepath>

@@ -14,7 +14,7 @@
 #   (c) Copyright 2000 by MEN mikro elektronik GmbH, Nuernberg, Germany
 #*****************************************************************************
 
-MAK_NAME=sync_test
+MAK_NAME=z147_sync_test
 
 MAK_LIBS=$(LIB_PREFIX)$(MEN_LIB_DIR)/mdis_api$(LIB_SUFFIX)	\
 			$(LIB_PREFIX)$(MEN_LIB_DIR)/usr_oss$(LIB_SUFFIX)	\

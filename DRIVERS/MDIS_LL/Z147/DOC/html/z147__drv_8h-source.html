@@ -61,42 +61,57 @@
 <a name="l00055"></a><a class="code" href="z147__drv_8h.html#a11">00055</a> <span class="preprocessor">#define Z147_CLR_ERR_SIGNAL      M_DEV_OF+0x0C    </span>
 <a name="l00056"></a><a class="code" href="z147__drv_8h.html#a12">00056</a> <span class="preprocessor">#define Z147_RX_SYNC_CFG         M_DEV_OF+0x0D    </span>
 <a name="l00057"></a><a class="code" href="z147__drv_8h.html#a13">00057</a> <span class="preprocessor">#define Z147_RX_MODE_CFG         M_DEV_OF+0x0E    </span>
-<a name="l00060"></a><a class="code" href="z147__drv_8h.html#a14">00060</a> <span class="preprocessor">#define _Z147_GLOBNAME(var,name) var##_##name</span>
-00061 <span class="preprocessor"></span>
-00062 <span class="preprocessor">#ifndef _ONE_NAMESPACE_PER_DRIVER_</span>
-<a name="l00063"></a><a class="code" href="z147__drv_8h.html#a15">00063</a> <span class="preprocessor"></span><span class="preprocessor">  #define Z147_GLOBNAME(var,name)    _Z147_GLOBNAME(var,name)</span>
-00064 <span class="preprocessor"></span><span class="preprocessor">#else</span>
-00065 <span class="preprocessor"></span><span class="preprocessor">  #define Z147_GLOBNAME(var,name)    _Z147_GLOBNAME(Z147,name)</span>
-00066 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-00067 <span class="preprocessor"></span>
-<a name="l00068"></a><a class="code" href="z147__drv_8h.html#a16">00068</a> <span class="preprocessor">#define __Z147_GetEntry    Z147_GLOBNAME(Z147_VARIANT, GetEntry)</span>
-00069 <span class="preprocessor"></span>
-00070 <span class="comment">/*-----------------------------------------+</span>
-00071 <span class="comment">|  PROTOTYPES                              |</span>
-00072 <span class="comment">+-----------------------------------------*/</span>
-00073 <span class="preprocessor">#ifdef _LL_DRV_</span>
-00074 <span class="preprocessor"></span><span class="preprocessor">#ifndef _ONE_NAMESPACE_PER_DRIVER_</span>
-00075 <span class="preprocessor"></span>    <span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="z147__drv_8h.html#a16">__Z147_GetEntry</a>(LL_ENTRY* drvP);
-00076 <span class="preprocessor">#endif</span>
-00077 <span class="preprocessor"></span><span class="preprocessor">#endif </span><span class="comment">/* _LL_DRV_ */</span>
-00078 
-00079 <span class="comment">/*-----------------------------------------+</span>
-00080 <span class="comment">|  BACKWARD COMPATIBILITY TO MDIS4         |</span>
-00081 <span class="comment">+-----------------------------------------*/</span>
-00082 <span class="preprocessor">#ifndef U_INT32_OR_64</span>
-00083 <span class="preprocessor"></span>  <span class="comment">/* we have an MDIS4 men_types.h and mdis_api.h included */</span>
-00084   <span class="comment">/* only 32bit compatibility needed!                     */</span>
-<a name="l00085"></a><a class="code" href="z147__drv_8h.html#a17">00085</a> <span class="preprocessor">  #define INT32_OR_64    int32</span>
-<a name="l00086"></a><a class="code" href="z147__drv_8h.html#a18">00086</a> <span class="preprocessor"></span><span class="preprocessor">  #define U_INT32_OR_64  u_int32</span>
-<a name="l00087"></a><a class="code" href="z147__drv_8h.html#a19">00087</a> <span class="preprocessor"></span>  <span class="keyword">typedef</span> <a class="code" href="z147__drv_8h.html#a17">INT32_OR_64</a>    <a class="code" href="z147__drv_8h.html#a19">MDIS_PATH</a>;
-00088 <span class="preprocessor">#endif </span><span class="comment">/* U_INT32_OR_64 */</span>
-00089 
-00090 <span class="preprocessor">#ifdef __cplusplus</span>
-00091 <span class="preprocessor"></span>      }
+00060 <span class="preprocessor"></span><span class="comment">/* Z147_RX_DATA_RATE Get/Setstat specific defines */</span> 
+<a name="l00061"></a><a class="code" href="z147__drv_8h.html#a14">00061</a> <span class="preprocessor">#define Z147_RX_DATA_RATE_64        0    </span>
+<a name="l00062"></a><a class="code" href="z147__drv_8h.html#a15">00062</a> <span class="preprocessor">#define Z147_RX_DATA_RATE_128       1    </span>
+<a name="l00063"></a><a class="code" href="z147__drv_8h.html#a16">00063</a> <span class="preprocessor">#define Z147_RX_DATA_RATE_256       2    </span>
+<a name="l00064"></a><a class="code" href="z147__drv_8h.html#a17">00064</a> <span class="preprocessor">#define Z147_RX_DATA_RATE_512       3    </span>
+<a name="l00065"></a><a class="code" href="z147__drv_8h.html#a18">00065</a> <span class="preprocessor">#define Z147_RX_DATA_RATE_1024      4    </span>
+<a name="l00066"></a><a class="code" href="z147__drv_8h.html#a19">00066</a> <span class="preprocessor">#define Z147_RX_DATA_RATE_2048      5    </span>
+<a name="l00067"></a><a class="code" href="z147__drv_8h.html#a20">00067</a> <span class="preprocessor">#define Z147_RX_DATA_RATE_4096      6    </span>
+<a name="l00068"></a><a class="code" href="z147__drv_8h.html#a21">00068</a> <span class="preprocessor">#define Z147_RX_DATA_RATE_8192      7    </span>
+00070 <span class="preprocessor"></span><span class="comment">/* SYNC words */</span>
+<a name="l00071"></a><a class="code" href="z147__drv_8h.html#a22">00071</a> <span class="preprocessor">#define Z147_ARINC717_SUB_1_SYNC      0x247</span>
+<a name="l00072"></a><a class="code" href="z147__drv_8h.html#a23">00072</a> <span class="preprocessor"></span><span class="preprocessor">#define Z147_ARINC717_SUB_2_SYNC      0x5B8</span>
+<a name="l00073"></a><a class="code" href="z147__drv_8h.html#a24">00073</a> <span class="preprocessor"></span><span class="preprocessor">#define Z147_ARINC717_SUB_3_SYNC      0xA47</span>
+<a name="l00074"></a><a class="code" href="z147__drv_8h.html#a25">00074</a> <span class="preprocessor"></span><span class="preprocessor">#define Z147_ARINC717_SUB_4_SYNC      0xDB8</span>
+00075 <span class="preprocessor"></span>
+<a name="l00076"></a><a class="code" href="z147__drv_8h.html#a26">00076</a> <span class="preprocessor">#define _Z147_GLOBNAME(var,name) var##_##name</span>
+00077 <span class="preprocessor"></span>
+00078 <span class="preprocessor">#ifndef _ONE_NAMESPACE_PER_DRIVER_</span>
+<a name="l00079"></a><a class="code" href="z147__drv_8h.html#a27">00079</a> <span class="preprocessor"></span><span class="preprocessor">  #define Z147_GLOBNAME(var,name)    _Z147_GLOBNAME(var,name)</span>
+00080 <span class="preprocessor"></span><span class="preprocessor">#else</span>
+00081 <span class="preprocessor"></span><span class="preprocessor">  #define Z147_GLOBNAME(var,name)    _Z147_GLOBNAME(Z147,name)</span>
+00082 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+00083 <span class="preprocessor"></span>
+<a name="l00084"></a><a class="code" href="z147__drv_8h.html#a28">00084</a> <span class="preprocessor">#define __Z147_GetEntry    Z147_GLOBNAME(Z147_VARIANT, GetEntry)</span>
+00085 <span class="preprocessor"></span>
+00086 <span class="comment">/*-----------------------------------------+</span>
+00087 <span class="comment">|  PROTOTYPES                              |</span>
+00088 <span class="comment">+-----------------------------------------*/</span>
+00089 <span class="preprocessor">#ifdef _LL_DRV_</span>
+00090 <span class="preprocessor"></span><span class="preprocessor">#ifndef _ONE_NAMESPACE_PER_DRIVER_</span>
+00091 <span class="preprocessor"></span>    <span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="z147__drv_8h.html#a28">__Z147_GetEntry</a>(LL_ENTRY* drvP);
 00092 <span class="preprocessor">#endif</span>
-00093 <span class="preprocessor"></span>
-00094 <span class="preprocessor">#endif </span><span class="comment">/* _Z147_DRV_H */</span>
-00095 
+00093 <span class="preprocessor"></span><span class="preprocessor">#endif </span><span class="comment">/* _LL_DRV_ */</span>
+00094 
+00095 <span class="comment">/*-----------------------------------------+</span>
+00096 <span class="comment">|  BACKWARD COMPATIBILITY TO MDIS4         |</span>
+00097 <span class="comment">+-----------------------------------------*/</span>
+00098 <span class="preprocessor">#ifndef U_INT32_OR_64</span>
+00099 <span class="preprocessor"></span>  <span class="comment">/* we have an MDIS4 men_types.h and mdis_api.h included */</span>
+00100   <span class="comment">/* only 32bit compatibility needed!                     */</span>
+<a name="l00101"></a><a class="code" href="z147__drv_8h.html#a29">00101</a> <span class="preprocessor">  #define INT32_OR_64    int32</span>
+<a name="l00102"></a><a class="code" href="z147__drv_8h.html#a30">00102</a> <span class="preprocessor"></span><span class="preprocessor">  #define U_INT32_OR_64  u_int32</span>
+<a name="l00103"></a><a class="code" href="z147__drv_8h.html#a31">00103</a> <span class="preprocessor"></span>  <span class="keyword">typedef</span> <a class="code" href="z147__drv_8h.html#a29">INT32_OR_64</a>    <a class="code" href="z147__drv_8h.html#a31">MDIS_PATH</a>;
+00104 <span class="preprocessor">#endif </span><span class="comment">/* U_INT32_OR_64 */</span>
+00105 
+00106 <span class="preprocessor">#ifdef __cplusplus</span>
+00107 <span class="preprocessor"></span>      }
+00108 <span class="preprocessor">#endif</span>
+00109 <span class="preprocessor"></span>
+00110 <span class="preprocessor">#endif </span><span class="comment">/* _Z147_DRV_H */</span>
+00111 
 </pre></div>
 	</div>
 </div>

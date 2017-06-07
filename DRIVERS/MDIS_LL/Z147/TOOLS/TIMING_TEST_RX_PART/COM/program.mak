@@ -14,7 +14,7 @@
 #   (c) Copyright 2000 by MEN mikro elektronik GmbH, Nuernberg, Germany
 #*****************************************************************************
 
-MAK_NAME=timing_test_rx_part
+MAK_NAME=z147_timing_test_rx
 
 MAK_LIBS=$(LIB_PREFIX)$(MEN_LIB_DIR)/mdis_api$(LIB_SUFFIX)	\
 			$(LIB_PREFIX)$(MEN_LIB_DIR)/usr_oss$(LIB_SUFFIX)	\

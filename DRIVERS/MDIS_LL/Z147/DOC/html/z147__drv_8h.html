@@ -60,13 +60,33 @@
 <tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a13">Z147_RX_MODE_CFG</a>&nbsp;&nbsp;&nbsp;M_DEV_OF+0x0E</td></tr>
 <tr><td>&nbsp;</td><td><em class="mdesc">G,S: Configure Receive mode.</em> <a href="#a13"></a><em></em><br><br></td></tr>
 <tr><td colspan=2><br><h2>Defines</h2></td></tr>
-<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a14">_Z147_GLOBNAME</a>(var, name)&nbsp;&nbsp;&nbsp;var##_##name</td></tr>
-<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a15">Z147_GLOBNAME</a>(var, name)&nbsp;&nbsp;&nbsp;_Z147_GLOBNAME(var,name)</td></tr>
-<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a16">__Z147_GetEntry</a>&nbsp;&nbsp;&nbsp;Z147_GLOBNAME(Z147_VARIANT, GetEntry)</td></tr>
-<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a17">INT32_OR_64</a>&nbsp;&nbsp;&nbsp;int32</td></tr>
-<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a18">U_INT32_OR_64</a>&nbsp;&nbsp;&nbsp;u_int32</td></tr>
+<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a14">Z147_RX_DATA_RATE_64</a>&nbsp;&nbsp;&nbsp;0</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Set data rate of 64 words/sec.</em> <a href="#a14"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a15">Z147_RX_DATA_RATE_128</a>&nbsp;&nbsp;&nbsp;1</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Set data rate of 128 words/sec.</em> <a href="#a15"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a16">Z147_RX_DATA_RATE_256</a>&nbsp;&nbsp;&nbsp;2</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Set data rate of 256 words/sec.</em> <a href="#a16"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a17">Z147_RX_DATA_RATE_512</a>&nbsp;&nbsp;&nbsp;3</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Set data rate of 512 words/sec.</em> <a href="#a17"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a18">Z147_RX_DATA_RATE_1024</a>&nbsp;&nbsp;&nbsp;4</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Set data rate of 1024 words/sec.</em> <a href="#a18"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a19">Z147_RX_DATA_RATE_2048</a>&nbsp;&nbsp;&nbsp;5</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Set data rate of 2048 words/sec.</em> <a href="#a19"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a20">Z147_RX_DATA_RATE_4096</a>&nbsp;&nbsp;&nbsp;6</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Set data rate of 4096 words/sec.</em> <a href="#a20"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a21">Z147_RX_DATA_RATE_8192</a>&nbsp;&nbsp;&nbsp;7</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Set data rate of 8192 words/sec.</em> <a href="#a21"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a22">Z147_ARINC717_SUB_1_SYNC</a>&nbsp;&nbsp;&nbsp;0x247</td></tr>
+<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a23">Z147_ARINC717_SUB_2_SYNC</a>&nbsp;&nbsp;&nbsp;0x5B8</td></tr>
+<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a24">Z147_ARINC717_SUB_3_SYNC</a>&nbsp;&nbsp;&nbsp;0xA47</td></tr>
+<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a25">Z147_ARINC717_SUB_4_SYNC</a>&nbsp;&nbsp;&nbsp;0xDB8</td></tr>
+<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a26">_Z147_GLOBNAME</a>(var, name)&nbsp;&nbsp;&nbsp;var##_##name</td></tr>
+<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a27">Z147_GLOBNAME</a>(var, name)&nbsp;&nbsp;&nbsp;_Z147_GLOBNAME(var,name)</td></tr>
+<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a28">__Z147_GetEntry</a>&nbsp;&nbsp;&nbsp;Z147_GLOBNAME(Z147_VARIANT, GetEntry)</td></tr>
+<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a29">INT32_OR_64</a>&nbsp;&nbsp;&nbsp;int32</td></tr>
+<tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a30">U_INT32_OR_64</a>&nbsp;&nbsp;&nbsp;u_int32</td></tr>
 <tr><td colspan=2><br><h2>Typedefs</h2></td></tr>
-<tr><td nowrap align=right valign=top>typedef INT32_OR_64&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a19">MDIS_PATH</a></td></tr>
+<tr><td nowrap align=right valign=top>typedef INT32_OR_64&nbsp;</td><td valign=bottom><a class="el" href="z147__drv_8h.html#a31">MDIS_PATH</a></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Header file for Z147 driver containing Z147 specific status codes and Z147 function prototypes.
@@ -77,7 +97,7 @@ Header file for Z147 driver containing Z147 specific status codes and Z147 funct
 <p>
 <dl compact><dt><b>Preprocessor Switches:</b></dt><dd>_ONE_NAMESPACE_PER_DRIVER_ _LL_DRV_</dd></dl>
 <hr><h2>Define Documentation</h2>
-<a name="a16" doxytag="z147_drv.h::__Z147_GetEntry"></a><p>
+<a name="a28" doxytag="z147_drv.h::__Z147_GetEntry"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -99,7 +119,7 @@ Header file for Z147 driver containing Z147 specific status codes and Z147 funct
     </td>
   </tr>
 </table>
-<a name="a14" doxytag="z147_drv.h::_Z147_GLOBNAME"></a><p>
+<a name="a26" doxytag="z147_drv.h::_Z147_GLOBNAME"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -129,7 +149,7 @@ Header file for Z147 driver containing Z147 specific status codes and Z147 funct
     </td>
   </tr>
 </table>
-<a name="a17" doxytag="z147_drv.h::INT32_OR_64"></a><p>
+<a name="a29" doxytag="z147_drv.h::INT32_OR_64"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -151,13 +171,101 @@ Header file for Z147 driver containing Z147 specific status codes and Z147 funct
     </td>
   </tr>
 </table>
-<a name="a18" doxytag="z147_drv.h::U_INT32_OR_64"></a><p>
+<a name="a30" doxytag="z147_drv.h::U_INT32_OR_64"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
       <table cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td class="md" nowrap valign="top"> #define U_INT32_OR_64&nbsp;&nbsp;&nbsp;u_int32
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+    </td>
+  </tr>
+</table>
+<a name="a22" doxytag="z147_drv.h::Z147_ARINC717_SUB_1_SYNC"></a><p>
+<table width="100%" cellpadding="2" cellspacing="0" border="0">
+  <tr>
+    <td class="md">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define Z147_ARINC717_SUB_1_SYNC&nbsp;&nbsp;&nbsp;0x247
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+    </td>
+  </tr>
+</table>
+<a name="a23" doxytag="z147_drv.h::Z147_ARINC717_SUB_2_SYNC"></a><p>
+<table width="100%" cellpadding="2" cellspacing="0" border="0">
+  <tr>
+    <td class="md">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define Z147_ARINC717_SUB_2_SYNC&nbsp;&nbsp;&nbsp;0x5B8
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+    </td>
+  </tr>
+</table>
+<a name="a24" doxytag="z147_drv.h::Z147_ARINC717_SUB_3_SYNC"></a><p>
+<table width="100%" cellpadding="2" cellspacing="0" border="0">
+  <tr>
+    <td class="md">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define Z147_ARINC717_SUB_3_SYNC&nbsp;&nbsp;&nbsp;0xA47
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+    </td>
+  </tr>
+</table>
+<a name="a25" doxytag="z147_drv.h::Z147_ARINC717_SUB_4_SYNC"></a><p>
+<table width="100%" cellpadding="2" cellspacing="0" border="0">
+  <tr>
+    <td class="md">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define Z147_ARINC717_SUB_4_SYNC&nbsp;&nbsp;&nbsp;0xDB8
       </table>
     </td>
   </tr>
@@ -269,7 +377,7 @@ G,S: Get/Set RX_LCR RX error write enable.
     </td>
   </tr>
 </table>
-<a name="a15" doxytag="z147_drv.h::Z147_GLOBNAME"></a><p>
+<a name="a27" doxytag="z147_drv.h::Z147_GLOBNAME"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -343,6 +451,198 @@ G : Received data length.
 
 <p>
 G,S: Get/Set RX_LCR RX_SPEED.
+<p>
+    </td>
+  </tr>
+</table>
+<a name="a18" doxytag="z147_drv.h::Z147_RX_DATA_RATE_1024"></a><p>
+<table width="100%" cellpadding="2" cellspacing="0" border="0">
+  <tr>
+    <td class="md">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define Z147_RX_DATA_RATE_1024&nbsp;&nbsp;&nbsp;4
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Set data rate of 1024 words/sec.
+<p>
+    </td>
+  </tr>
+</table>
+<a name="a15" doxytag="z147_drv.h::Z147_RX_DATA_RATE_128"></a><p>
+<table width="100%" cellpadding="2" cellspacing="0" border="0">
+  <tr>
+    <td class="md">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define Z147_RX_DATA_RATE_128&nbsp;&nbsp;&nbsp;1
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Set data rate of 128 words/sec.
+<p>
+    </td>
+  </tr>
+</table>
+<a name="a19" doxytag="z147_drv.h::Z147_RX_DATA_RATE_2048"></a><p>
+<table width="100%" cellpadding="2" cellspacing="0" border="0">
+  <tr>
+    <td class="md">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define Z147_RX_DATA_RATE_2048&nbsp;&nbsp;&nbsp;5
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Set data rate of 2048 words/sec.
+<p>
+    </td>
+  </tr>
+</table>
+<a name="a16" doxytag="z147_drv.h::Z147_RX_DATA_RATE_256"></a><p>
+<table width="100%" cellpadding="2" cellspacing="0" border="0">
+  <tr>
+    <td class="md">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define Z147_RX_DATA_RATE_256&nbsp;&nbsp;&nbsp;2
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Set data rate of 256 words/sec.
+<p>
+    </td>
+  </tr>
+</table>
+<a name="a20" doxytag="z147_drv.h::Z147_RX_DATA_RATE_4096"></a><p>
+<table width="100%" cellpadding="2" cellspacing="0" border="0">
+  <tr>
+    <td class="md">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define Z147_RX_DATA_RATE_4096&nbsp;&nbsp;&nbsp;6
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Set data rate of 4096 words/sec.
+<p>
+    </td>
+  </tr>
+</table>
+<a name="a17" doxytag="z147_drv.h::Z147_RX_DATA_RATE_512"></a><p>
+<table width="100%" cellpadding="2" cellspacing="0" border="0">
+  <tr>
+    <td class="md">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define Z147_RX_DATA_RATE_512&nbsp;&nbsp;&nbsp;3
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Set data rate of 512 words/sec.
+<p>
+    </td>
+  </tr>
+</table>
+<a name="a14" doxytag="z147_drv.h::Z147_RX_DATA_RATE_64"></a><p>
+<table width="100%" cellpadding="2" cellspacing="0" border="0">
+  <tr>
+    <td class="md">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define Z147_RX_DATA_RATE_64&nbsp;&nbsp;&nbsp;0
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Set data rate of 64 words/sec.
+<p>
+    </td>
+  </tr>
+</table>
+<a name="a21" doxytag="z147_drv.h::Z147_RX_DATA_RATE_8192"></a><p>
+<table width="100%" cellpadding="2" cellspacing="0" border="0">
+  <tr>
+    <td class="md">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> #define Z147_RX_DATA_RATE_8192&nbsp;&nbsp;&nbsp;7
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Set data rate of 8192 words/sec.
 <p>
     </td>
   </tr>
@@ -540,7 +840,7 @@ S: Set signal sent on IRQ.
   </tr>
 </table>
 <hr><h2>Typedef Documentation</h2>
-<a name="a19" doxytag="z147_drv.h::MDIS_PATH"></a><p>
+<a name="a31" doxytag="z147_drv.h::MDIS_PATH"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">

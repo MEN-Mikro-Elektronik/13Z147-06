@@ -55,8 +55,24 @@
 #define Z147_CLR_ERR_SIGNAL		 M_DEV_OF+0x0C	  /**<   S: Clear RX error signal. */
 #define Z147_RX_SYNC_CFG		 M_DEV_OF+0x0D	  /**< G,S: Configure synchronization mode. */
 #define Z147_RX_MODE_CFG		 M_DEV_OF+0x0E	  /**< G,S: Configure Receive mode. */
-
 /**@}*/
+
+/* Z147_RX_DATA_RATE Get/Setstat specific defines */ 
+#define Z147_RX_DATA_RATE_64        0    /**< Set data rate of 64 words/sec. */
+#define Z147_RX_DATA_RATE_128       1    /**< Set data rate of 128 words/sec. */
+#define Z147_RX_DATA_RATE_256       2    /**< Set data rate of 256 words/sec. */
+#define Z147_RX_DATA_RATE_512       3    /**< Set data rate of 512 words/sec. */
+#define Z147_RX_DATA_RATE_1024      4    /**< Set data rate of 1024 words/sec. */
+#define Z147_RX_DATA_RATE_2048      5    /**< Set data rate of 2048 words/sec. */
+#define Z147_RX_DATA_RATE_4096      6    /**< Set data rate of 4096 words/sec. */
+#define Z147_RX_DATA_RATE_8192      7    /**< Set data rate of 8192 words/sec. */
+
+/* SYNC words */
+#define Z147_ARINC717_SUB_1_SYNC      0x247
+#define Z147_ARINC717_SUB_2_SYNC      0x5B8
+#define Z147_ARINC717_SUB_3_SYNC      0xA47
+#define Z147_ARINC717_SUB_4_SYNC      0xDB8
+
 #define _Z147_GLOBNAME(var,name) var##_##name
 
 #ifndef _ONE_NAMESPACE_PER_DRIVER_

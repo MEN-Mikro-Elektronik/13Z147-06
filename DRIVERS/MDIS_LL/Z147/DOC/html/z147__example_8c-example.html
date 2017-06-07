@@ -30,13 +30,13 @@
 <span class="comment"> ****************************************************************************/</span>
 <span class="comment">/*-------------------------------[ History ]--------------------------------</span>
 <span class="comment"> *</span>
-<span class="comment"> * $Log: z17_simp.c,v $</span>
+<span class="comment"> * $Log: Z147_example.c,v $</span>
+<span class="comment"> * Revision 1.1  2016/04/27 13:47:36  Apatil</span>
+<span class="comment"> * Initial Revision</span>
 <span class="comment"> *</span>
 <span class="comment"> *---------------------------------------------------------------------------</span>
 <span class="comment"> * (c) Copyright 2003 by MEN mikro elektronik GmbH, Nuernberg, Germany</span>
 <span class="comment"> ****************************************************************************/</span>
-
-<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> RCSid[]=<span class="stringliteral">"$Id: z147_simp.c,v 1.5 2009/07/10 13:40:12 CRuff Exp $"</span>;
 
 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
 <span class="preprocessor">#include &lt;string.h&gt;</span>
@@ -49,89 +49,61 @@
 <span class="comment">/*--------------------------------------+</span>
 <span class="comment">|   DEFINES                             |</span>
 <span class="comment">+--------------------------------------*/</span>
-<span class="comment">/* SYNC words */</span>
-<span class="preprocessor">#define ARINC717_SUB_1_SYNC      0x247</span>
-<span class="preprocessor"></span><span class="preprocessor">#define ARINC717_SUB_2_SYNC      0x5B8</span>
-<span class="preprocessor"></span><span class="preprocessor">#define ARINC717_SUB_3_SYNC      0xA47</span>
-<span class="preprocessor"></span><span class="preprocessor">#define ARINC717_SUB_4_SYNC      0xDB8</span>
+<span class="preprocessor">#define MAX_DATA_LEN    32768</span>
 <span class="preprocessor"></span>
-<span class="preprocessor">#define Z147_RX_DATA_RATE_64     0    </span>
-<span class="preprocessor">#define Z147_RX_DATA_RATE_128    1    </span>
-<span class="preprocessor">#define Z147_RX_DATA_RATE_256    2    </span>
-<span class="preprocessor">#define Z147_RX_DATA_RATE_512    3    </span>
-<span class="preprocessor">#define Z147_RX_DATA_RATE_1024   4    </span>
-<span class="preprocessor">#define Z147_RX_DATA_RATE_2048   5    </span>
-<span class="preprocessor">#define Z147_RX_DATA_RATE_4096   6    </span>
-<span class="preprocessor">#define Z147_RX_DATA_RATE_8192   7    </span>
-<span class="preprocessor"></span><span class="comment">/*--------------------------------------+</span>
-<span class="comment">|   TYPDEFS                             |</span>
-<span class="comment">+--------------------------------------*/</span>
-<span class="comment">/* none */</span>
-
-<span class="comment">/*--------------------------------------+</span>
-<span class="comment">|   EXTERNALS                           |</span>
-<span class="comment">+--------------------------------------*/</span>
-<span class="comment">/* none */</span>
-
 <span class="comment">/*--------------------------------------+</span>
 <span class="comment">|   GLOBALS                             |</span>
 <span class="comment">+--------------------------------------*/</span>
 <span class="keyword">static</span> <span class="keywordtype">int</span> G_sigCount = 0;
+<a class="code" href="z147__drv_8h.html#a31">MDIS_PATH</a> G_rxPath;
+<span class="keywordtype">int</span> G_errors = 0;
+u_int32 G_dataLen = 0;
+u_int32 G_rxFrameCnt = 0;
 
 <span class="comment">/*--------------------------------------+</span>
 <span class="comment">|   PROTOTYPES                          |</span>
 <span class="comment">+--------------------------------------*/</span>
 <span class="keyword">static</span> <span class="keywordtype">void</span> PrintError(<span class="keywordtype">char</span> *info);
 <span class="keyword">static</span> <span class="keywordtype">void</span> __MAPILIB SignalHandler( u_int32 sig );
-<a class="code" href="z147__drv_8h.html#a19">MDIS_PATH</a> rxPath;
-<a class="code" href="z147__drv_8h.html#a19">MDIS_PATH</a> txPath;
-u_int16 txDataArray[32768];
-u_int16 rxDataArray[32768];
-<span class="keywordtype">int</span> G_Errors = 0;
-u_int32 G_DataLen = 0;
-u_int8 G_TxDataByte = 0;
-u_int8 G_RxDataByte = 0;
-u_int32 G_TxFrameCnt = 0;
-u_int32 G_RxFrameCnt = 0;
 
 <span class="comment">/********************************* main ************************************/</span>
 <span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])
 {
-
     int32 irqCount;
-    <span class="keywordtype">char</span>    *rxDevice;
-    <span class="keywordtype">char</span>    *txDevice;
+    <span class="keywordtype">char</span> *rxDevice;
+    <span class="keywordtype">char</span> *txDevice;
     int32 result = 0;
     int32 isSync = 0;
-
     u_int32 i = 0;
     <span class="keywordtype">int</span> j = 0;
     <span class="keywordtype">int</span> k = 0;
-    <span class="keywordtype">int</span> dataRate =0;
-
+    <span class="keywordtype">int</span> dataRate = 0;
     <span class="keywordtype">int</span> testType = 0;
     u_int32 data = 0;
-
-
     u_int16 *txBuf = NULL;
     u_int16 *rxBuf = NULL;
-    printf(<span class="stringliteral">"argc = %d\n"</span>,argc );
+    u_int16 txDataArray[MAX_DATA_LEN];
+    u_int8 txDataByte = 0;
+    u_int32 txFrameCnt = 0;
+    <a class="code" href="z147__drv_8h.html#a31">MDIS_PATH</a> txPath;
+
     <span class="keywordflow">if</span> (argc &lt; 3 || strcmp(argv[1],<span class="stringliteral">"-?"</span>)==0) {
-        printf(<span class="stringliteral">"Syntax: z147_example &lt;rxDevice&gt; &lt;txDevice&gt; &lt;Data Length&gt;\n"</span>);
+        printf(<span class="stringliteral">"Syntax: z147_example &lt;rxDevice&gt; &lt;txDevice&gt;\n"</span>);
         printf(<span class="stringliteral">"Function: Example program for using the Z147 driver\n"</span>);
-        printf(<span class="stringliteral">"%s \n"</span>,RCSid );
+        printf(<span class="stringliteral">"Options:\n"</span>);
+        printf(<span class="stringliteral">"    rxDevice       rx device name\n"</span>);
+        printf(<span class="stringliteral">"    txDevice       tx device name\n"</span>);
         <span class="keywordflow">return</span>(1);
     }
 
-    printf(<span class="stringliteral">"%s \n"</span>,RCSid );
-
     rxDevice = argv[1];
     txDevice = argv[2];
-    G_DataLen = 256;
+    G_dataLen = 256;
+    
     <span class="comment">/*--------------------+</span>
-<span class="comment">    |  open rxPath          |</span>
+<span class="comment">    |  open               |</span>
 <span class="comment">    +--------------------*/</span>
-    <span class="keywordflow">if</span> ((rxPath = M_open(rxDevice)) &lt; 0) {
+    <span class="keywordflow">if</span> ((G_rxPath = M_open(rxDevice)) &lt; 0) {
         PrintError(<span class="stringliteral">"open"</span>);
         <span class="keywordflow">return</span>(1);
     }
@@ -143,52 +115,58 @@ u_int32 G_RxFrameCnt = 0;
     <span class="comment">/*--------------------+</span>
 <span class="comment">    |  config             |</span>
 <span class="comment">    +--------------------*/</span>
-    <span class="comment">/* install signal which will be received at change of input ports */</span>
     UOS_SigInit( SignalHandler );
     UOS_SigInstall( UOS_SIG_USR1 );
-    result = M_setstat(rxPath, Z147_SET_SIGNAL, UOS_SIG_USR1);
+    
+    result = M_setstat(G_rxPath, Z147_SET_SIGNAL, UOS_SIG_USR1);
     <span class="keywordflow">if</span>(result != 0){
-        G_Errors++;
+        G_errors++;
     }
-        result = M_setstat(txPath, Z247_TX_DATA_RATE, dataRate);
-        <span class="keywordflow">if</span>(result != 0){
-            printf(<span class="stringliteral">"Setting transmit data rate failed.\n"</span>);
-            G_Errors++;
-        }
-        result = M_setstat(rxPath, Z147_RX_DATA_RATE, dataRate);
-        <span class="keywordflow">if</span>(result != 0){
-            printf(<span class="stringliteral">"Setting receive data rate failed.\n"</span>);
-            G_Errors++;
-        }
-    G_TxDataByte = 0;
+    
+    result = M_setstat(txPath, Z247_TX_DATA_RATE, dataRate);
+    <span class="keywordflow">if</span>(result != 0){
+        printf(<span class="stringliteral">"Setting transmit data rate failed.\n"</span>);
+        G_errors++;
+    }
+    result = M_setstat(G_rxPath, Z147_RX_DATA_RATE, dataRate);
+    <span class="keywordflow">if</span>(result != 0){
+        printf(<span class="stringliteral">"Setting receive data rate failed.\n"</span>);
+        G_errors++;
+    }
+    
+    txDataByte = 0;
     <span class="keywordflow">for</span>(k=0;k&lt;10;k++){
         printf(<span class="stringliteral">"\n"</span>);
         printf(<span class="stringliteral">"################### Test Run-%d ################\n"</span>, k+1);
         printf(<span class="stringliteral">"----------------- Transmit -----------------\n"</span>);
-        printf(<span class="stringliteral">"User data length = %d and dataptr = 0x%x\n"</span>, G_DataLen, txDataArray);
-        G_TxDataByte = 0;
-        <span class="keywordflow">for</span>(i=0;i&lt;(G_DataLen-4);i++){
-            <span class="keywordflow">if</span>(i==G_TxDataByte){
-                txDataArray[i] = G_TxDataByte++;
+        printf(<span class="stringliteral">"User data length = %d and dataptr = 0x%x\n"</span>, G_dataLen, txDataArray);
+        
+        txDataByte = 0;
+        
+        <span class="keywordflow">for</span>(i=0;i&lt;(G_dataLen-4);i++){
+            <span class="keywordflow">if</span>(i==txDataByte){
+                txDataArray[i] = txDataByte++;
             }
-
         }
+        
         printf(<span class="stringliteral">"\n"</span>);
         printf(<span class="stringliteral">"\n"</span>);
-        result = M_setblock(txPath, (u_int8*)txDataArray, (G_DataLen *2) - 8);
+        
+        result = M_setblock(txPath, (u_int8*)txDataArray, (G_dataLen *2) - 8);
         <span class="keywordflow">if</span>(result &gt; 0){
-            printf(<span class="stringliteral">"Transmitted %d bytes successfully\n"</span>, G_DataLen *2);
+            printf(<span class="stringliteral">"Transmitted %d bytes successfully\n"</span>, G_dataLen *2);
         }<span class="keywordflow">else</span>{
             printf(<span class="stringliteral">"Write failed with result %d\n"</span>, result);
-            G_Errors++;
+            G_errors++;
         }
+        
         printf(<span class="stringliteral">"--------------------------------\n"</span>);
         printf(<span class="stringliteral">"\n"</span>);
 
         UOS_Delay( 4000);
 
         <span class="keywordflow">while</span>(1){
-            result = M_getstat(rxPath, Z147_RX_IN_SYNC, &amp;isSync);
+            result = M_getstat(G_rxPath, Z147_RX_IN_SYNC, &amp;isSync);
 
             <span class="keywordflow">if</span>((k!=0) &amp;&amp; result != 0){
                 printf(<span class="stringliteral">"Sync failed\n"</span>);
@@ -196,7 +174,7 @@ u_int32 G_RxFrameCnt = 0;
             }
 
             <span class="keywordflow">if</span>(result != 0){
-                G_Errors++;
+                G_errors++;
             }
             <span class="keywordflow">if</span>(isSync){
                 printf(<span class="stringliteral">"Is rx in sync = %d\n"</span>, isSync);
@@ -206,24 +184,23 @@ u_int32 G_RxFrameCnt = 0;
             }
         }
         printf(<span class="stringliteral">"G_sigCount = %d\n"</span>, G_sigCount);
-        G_TxFrameCnt++;
+        txFrameCnt++;
     }
     
-
     result = M_setstat(txPath, Z247_DISABLE_TX, 1);
     <span class="keywordflow">if</span>(result != 0){
-        G_Errors++;
+        G_errors++;
     }
-    result = M_setstat(rxPath, Z147_DISABLE_RX, 1);
+    result = M_setstat(G_rxPath, Z147_DISABLE_RX, 1);
     <span class="keywordflow">if</span>(result != 0){
-        G_Errors++;
+        G_errors++;
     }
     printf(<span class="stringliteral">"-------------------------------------------\n"</span>);
     printf(<span class="stringliteral">"-------------------------------------------\n\n"</span>);
-    printf(<span class="stringliteral">"Transmit frame count : %d\n"</span>, G_TxFrameCnt);
-    printf(<span class="stringliteral">"Receive frame count : %d\n"</span>, G_RxFrameCnt);
+    printf(<span class="stringliteral">"Transmit frame count : %d\n"</span>, txFrameCnt);
+    printf(<span class="stringliteral">"Receive frame count : %d\n"</span>, G_rxFrameCnt);
     printf(<span class="stringliteral">"Test Result : "</span>);
-    <span class="keywordflow">if</span>(G_Errors != 0){
+    <span class="keywordflow">if</span>(G_errors != 0){
         printf(<span class="stringliteral">"FAILED\n"</span>);
     }<span class="keywordflow">else</span>{
         printf(<span class="stringliteral">"PASSED\n"</span>);
@@ -231,8 +208,7 @@ u_int32 G_RxFrameCnt = 0;
     printf(<span class="stringliteral">"\n-------------------------------------------\n"</span>);
     printf(<span class="stringliteral">"-------------------------------------------\n"</span>);
 
-
-    <span class="keywordflow">if</span> (M_close(rxPath) &lt; 0){
+    <span class="keywordflow">if</span> (M_close(G_rxPath) &lt; 0){
         PrintError(<span class="stringliteral">"close"</span>);
     }
     <span class="keywordflow">if</span> (M_close(txPath) &lt; 0){
@@ -248,53 +224,57 @@ u_int32 G_RxFrameCnt = 0;
     printf(<span class="stringliteral">"*** can't %s: %s\n"</span>, info, M_errstring(UOS_ErrnoGet()));
 }
 
-<span class="comment">/**********************************************************************/</span>
+<span class="comment">/****************************** SignalHandler ******************************/</span>
 <span class="keyword">static</span> <span class="keywordtype">void</span> __MAPILIB SignalHandler( u_int32 sig )
 {
-    int32 result = 0;
+    int32 result=0;
     int32 i=0;
     int32 j=0;
+    u_int8 rxDataByte = 0;
+    u_int16 rxDataArray[MAX_DATA_LEN];
 
     <span class="keywordflow">if</span>( sig == UOS_SIG_USR1 ) {
         ++G_sigCount;
-        result = M_getblock( rxPath, (u_int8*)rxDataArray, (G_DataLen *2) );
+        
+        result = M_getblock( G_rxPath, (u_int8*)rxDataArray, (G_dataLen *2) );
         <span class="keywordflow">if</span>(result &lt; 0){
-            G_Errors++;
+            G_errors++;
         }
-        <span class="comment">/* program lower five ports as outputs, others as inputs */</span>
         <span class="keywordflow">if</span>(result &gt; 0){
             printf(<span class="stringliteral">"----------------- Receive -----------------\n"</span>);
             printf(<span class="stringliteral">"Receiving = %d bytes data\n"</span>, result);
-            G_RxDataByte = 0;
+            rxDataByte = 0;
+            
             <span class="comment">/* Add 4 sync words and ignore them in check. */</span>
             <span class="keywordflow">for</span>(j=0;j&lt;(result/2);j++){
-                <span class="keywordflow">if</span>((rxDataArray[j] != ARINC717_SUB_1_SYNC) &amp;&amp;
-                        (rxDataArray[j] != ARINC717_SUB_2_SYNC) &amp;&amp;
-                        (rxDataArray[j] != ARINC717_SUB_3_SYNC) &amp;&amp;
-                        (rxDataArray[j] != ARINC717_SUB_4_SYNC))
+                <span class="keywordflow">if</span>((rxDataArray[j] != <a class="code" href="z147__drv_8h.html#a22">Z147_ARINC717_SUB_1_SYNC</a>) &amp;&amp;
+                        (rxDataArray[j] != <a class="code" href="z147__drv_8h.html#a23">Z147_ARINC717_SUB_2_SYNC</a>) &amp;&amp;
+                        (rxDataArray[j] != <a class="code" href="z147__drv_8h.html#a24">Z147_ARINC717_SUB_3_SYNC</a>) &amp;&amp;
+                        (rxDataArray[j] != <a class="code" href="z147__drv_8h.html#a25">Z147_ARINC717_SUB_4_SYNC</a>))
                 {
-                    <span class="keywordflow">if</span>(rxDataArray[j] != (G_RxDataByte)){
-                        printf(<span class="stringliteral">"Expected 0x%x but received rxDataArray[%d] = 0x%x\n"</span>,(G_RxDataByte), j, rxDataArray[j]);
-                        G_Errors++;
+                    <span class="keywordflow">if</span>(rxDataArray[j] != (rxDataByte)){
+                        printf(<span class="stringliteral">"Expected 0x%x but received rxDataArray[%d] = 0x%x\n"</span>,
+                            (rxDataByte), j, rxDataArray[j]);
+                        G_errors++;
                     }
                     <span class="keywordflow">if</span>((j&lt;10) || (j&gt;((result/2) - 5))){
                         printf(<span class="stringliteral">" [%d]0x%x"</span>,j, rxDataArray[j]);
                     }
-                    G_RxDataByte++;
+                    rxDataByte++;
                 }
                 <span class="comment">/* Reset the buffer. */</span>
                 rxDataArray[j] = 0;
             }
+            
             printf(<span class="stringliteral">"\n"</span>);
             printf(<span class="stringliteral">"Received %d bytes successfully\n"</span>, result);
             printf(<span class="stringliteral">"--------------------------------\n"</span>);
-            G_RxFrameCnt++;
+            G_rxFrameCnt++;
         }<span class="keywordflow">else</span>{
             printf(<span class="stringliteral">"Read failed with the result = %d\n"</span>, result);
         }
     }
 }
-
 </pre></div>
 	</div>
 </div>

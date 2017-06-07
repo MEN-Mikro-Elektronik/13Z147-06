@@ -370,7 +370,7 @@ static int32 Z247_Exit(
 /****************************** Z247_Read ************************************/
 /** Read a value from the device
  *
- *  The function reads the current state of all port pins.
+ *  The function is not supported and always returns an ERR_LL_ILL_FUNC error.
  *
  *  \param llHdl      \IN  low-level handle
  *  \param ch         \IN  current channel
@@ -392,7 +392,7 @@ static int32 Z247_Read(
 /****************************** Z247_Write ***********************************/
 /** Description:  Write a value to the device
  *
- *  The function writes a value to the ports which are programmed as outputs.
+ *  The function is not supported and always returns an ERR_LL_ILL_FUNC error.
  *
  *  \param llHdl      \IN  low-level handle
  *  \param ch         \IN  current channel
@@ -692,6 +692,8 @@ static int32 Z247_GetStat(
 /******************************* Z247_BlockRead ******************************/
 /** Read a data block from the device
  *
+ *  The function is not supported and always returns an ERR_LL_ILL_FUNC error.
+ * 
  *  \param llHdl       \IN  low-level handle
  *  \param ch          \IN  current channel
  *  \param buf         \IN  data buffer
@@ -740,9 +742,6 @@ static int32 Z247_BlockWrite(
 	u_int16 * userBuf = (u_int16*)buf;
 
 	DBGWRT_2((DBH, ">>> LL - LL - Z247_BlockWrite: size=%d \n",size));
-	//		for(i=0;i<size;i++){
-	//			DBGWRT_1((DBH, "LL - Z247_Write: user Data[%d] = %d\n",i, *((u_int32*)buf + i)));
-	//		}
 
 	/* Check for user buffer size */
 	if((size != 0) && (buf != NULL)){
@@ -799,9 +798,7 @@ static int32 Z247_Irq(
 		/* Reset the underflow error. */
 		MWRITE_D8(llHdl->ma, Z247_TX_LSR_OFFSET, Z247_TX_LSR_UE_RST);
 
-		/////
-		// Is System Reset required ?????
-		/////
+		/* Is System Reset required ????? */
 
 		/* if requested send error signal to application ??? Is it correct ??? what shall be the signal inhalt? */
 		if (llHdl->portChangeSig){
@@ -1072,7 +1069,7 @@ int HwWrite(LL_HANDLE    *llHdl){
 
 	/* If enough space then write the data to the queue */
 	if(dataCount > 0){
-		// Need to add support for user buffer tx.
+		/* Need to add support for user buffer tx. */
 		for(i=0;i<dataCount;i++){
 			data = ReadFromBuffer(llHdl);
 			MWRITE_D16(llHdl->ma, Z247_FIFO_START_ADDR + (i*2),  data);
@@ -1085,53 +1082,6 @@ int HwWrite(LL_HANDLE    *llHdl){
 
 	return result;
 }
-
-///********************************* HwWrite **********************************
-// *
-// *  Description: Write data to the hardware register
-// *
-// *---------------------------------------------------------------------------
-// *  Input......: llHdl		low-level handle
-// *               retCode    return value
-// *  Output.....: return	    retCode
-// *  Globals....: -
-// ****************************************************************************/
-//int HwWrite(LL_HANDLE    *llHdl){
-//	int32 result = ERR_SUCCESS;
-//	int8 ringResult = 0;
-//	u_int32 dataBitMask = 0;
-//
-//	u_int32 dataCount = 0;
-//	u_int16 data = 0;
-//	u_int16 i = 0;
-//	u_int8 txcStatus = 0;
-//
-////	DBGWRT_1((DBH, "LL - Z247_Write: \n"));
-//
-//	/* Check TXC register for remaining space in the TX queue. */
-//	txcStatus = MREAD_D16(llHdl->ma, Z247_TX_TXC_OFFSET);
-//	DBGWRT_1((DBH, "LL - Z247_Write: txcStatus = %d\n", txcStatus));
-//
-//	/* Fill the complete queue. */
-//	dataCount = (Z247_TX_FIFO_MAX - txcStatus);
-//	DBGWRT_1((DBH, "LL - Z247_Write: writing %d bytes\n", dataCount));
-//
-//	/* If enough space then write the data to the queue */
-//	if(dataCount != 0){
-//		// Need to add support for user buffer tx.
-//		for(i=0;i<dataCount;i++){
-//			data = ReadFromBuffer(llHdl);
-//			MWRITE_D16(llHdl->ma, Z247_FIFO_START_ADDR + (i*2),  data);
-//		}
-//
-//		/* Acknowledge the the data before enabling the queue space interrupt. */
-//		MWRITE_D16(llHdl->ma, Z247_TX_TXA_OFFSET, dataCount);
-////		DBGWRT_1((DBH, "LL - Z247_Write:HWWrite Z247_TX_TXA_OFFSET = %d\n",dataCount));
-//	} /* Else, do nothing. */
-//
-//	return result;
-//}
-
 
 /**********************************************************************/
 /** Set TX Data rate.
